@@ -7,25 +7,35 @@
 	<version>1.0</version>
 	<name>jbossews</name>
 	<repositories>
-		<repository>
+        <repository>
+            <id>project.local</id>
+            <name>project</name>
+            <url>file:${project.basedir}/repo</url>
+        </repository>
+<!--		<repository>
 			<id>eap</id>
-			<url>http://maven.repository.redhat.com/techpreview/all</url>
+			<url>https://maven.repository.redhat.com/techpreview/all</url>
 			<releases>
 				<enabled>true</enabled>
 			</releases>
 			<snapshots>
 				<enabled>true</enabled>
 			</snapshots>
-		</repository>
+		</repository>-->
 		 <repository>
     		<id>spring-milestones</id>
-    		<url>http://repo.spring.io/libs-milestone/</url>
-  		</repository>	
+    		<url>https://repo.spring.io/libs-milestone/</url>
+  		</repository>
 	</repositories>
-	<pluginRepositories>
+<!--	<pluginRepositories>
+        <pluginRepository>
+            <id>project.local</id>
+            <name>project</name>
+            <url>file:${project.basedir}/repo</url>
+        </pluginRepository>
 		<pluginRepository>
 			<id>eap</id>
-			<url>http://maven.repository.redhat.com/techpreview/all</url>
+			<url>https://maven.repository.redhat.com/techpreview/all</url>
 			<releases>
 				<enabled>true</enabled>
 			</releases>
@@ -35,7 +45,7 @@
 		</pluginRepository>
     <pluginRepository>
       <id>apache</id>
-      <url>http://repo2.maven.org/maven2/org/apache/tomcat/</url>
+      <url>https://repo2.maven.org/maven2/org/apache/tomcat/</url>
       <releases>
         <enabled>true</enabled>
       </releases>
@@ -43,29 +53,32 @@
         <enabled>true</enabled>
       </snapshots>
     </pluginRepository>
-	</pluginRepositories>
+	</pluginRepositories>-->
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java-version>1.8</java-version>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
+		<spring.version>4.1.6.RELEASE</spring.version>
+		<spring.security.version>4.0.0.RELEASE</spring.security.version>
+		<slf4j.version>1.7.6</slf4j.version>
 	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>jcl-over-slf4j</artifactId>
-			<version>1.7.6</version>
+			<version>${slf4j.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
-			<version>1.7.6</version>
+			<version>${slf4j.version}</version>
 		</dependency>
-		<dependency>
+<!--		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
 			<version>9.2-1003-jdbc4</version>
-		</dependency>
+		</dependency>-->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
@@ -74,7 +87,7 @@
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
-			<version>3.0.1</version>
+			<version>3.1.0</version>
 			<scope>provided</scope>
 		</dependency>
 		<!-- AspectJ -->
@@ -90,16 +103,12 @@
 			<artifactId>javax.inject</artifactId>
 			<version>1</version>
 		</dependency>
-				
-
 		<dependency>
 			<groupId>javax.servlet.jsp</groupId>
 			<artifactId>jsp-api</artifactId>
 			<version>2.1</version>
 			<scope>provided</scope>
 		</dependency>
-		
-		
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
@@ -128,24 +137,23 @@
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-core</artifactId>
-			<version>3.2.4.RELEASE</version>
+			<version>${spring.security.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-config</artifactId>
-			<version>3.2.4.RELEASE</version>
+			<version>${spring.security.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-web</artifactId>
-			<version>3.2.4.RELEASE</version>
+			<version>${spring.security.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-taglibs</artifactId>
-			<version>3.2.4.RELEASE</version>
+			<version>${spring.security.version}</version>
 		</dependency>
-		
 		<!-- Hibernate -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
@@ -165,12 +173,12 @@
 		<dependency>
 			<groupId>org.springframework.social</groupId>
 			<artifactId>spring-social-core</artifactId>
-			<version>1.1.0.RELEASE</version>
+			<version>1.1.2.RELEASE</version>
 		</dependency>
 		<dependency>
 		<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-jpa</artifactId>
-			<version>1.7.0.RELEASE</version>
+			<version>1.9.0.RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.persistence</groupId>
@@ -186,6 +194,7 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-orm</artifactId>
+			<version>${spring.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.social</groupId>
@@ -200,6 +209,7 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
+			<version>${spring.version}</version>
 		</dependency>
 
 		<dependency>
@@ -215,30 +225,37 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-aop</artifactId>
+			<version>${spring.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-beans</artifactId>
+			<version>${spring.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-expression</artifactId>
+			<version>${spring.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-web</artifactId>
+			<version>${spring.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jdbc</artifactId>
+			<version>${spring.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-tx</artifactId>
+			<version>${spring.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.hibernate</groupId>
@@ -253,12 +270,13 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context-support</artifactId>
+			<version>${spring.version}</version>
 		</dependency>
-		<dependency>
-			<groupId>com.javaplanner</groupId>
-			<artifactId>javaplanner</artifactId>
-			<version>1.5</version>
-		</dependency>
+        <dependency>
+            <groupId>com.example</groupId>
+            <artifactId>javaplanner</artifactId>
+            <version>1.5</version>
+        </dependency>
 		<!-- Jackson JSON Mapper -->
         <dependency><!-- jackson -->
             <groupId>org.codehaus.jackson</groupId>
@@ -268,12 +286,12 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-websocket</artifactId>
-			<version>4.1.6.RELEASE</version>
+			<version>${spring.version}</version>
 		</dependency>
 		<dependency>
  			<groupId>org.springframework</groupId>
  			<artifactId>spring-messaging</artifactId>
-			<version>4.1.6.RELEASE</version>
+			<version>${spring.version}</version>
  		</dependency>
 		<dependency>
 		  <groupId>org.springframework.amqp</groupId>
@@ -283,69 +301,77 @@
 	</dependencies>
 	<dependencyManagement>
     	<dependencies>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-framework-bom</artifactId>
+				<version>${spring.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
     		<dependency>
     			<groupId>org.springframework</groupId>
     			<artifactId>spring-webmvc</artifactId>
-    			<version>4.1.6.RELEASE</version>
+				<version>${spring.version}</version>
     		</dependency>
     		<dependency>
     			<groupId>org.springframework</groupId>
     			<artifactId>spring-orm</artifactId>
-    			<version>4.1.6.RELEASE</version>
+				<version>${spring.version}</version>
     		</dependency>
     		<dependency>
     			<groupId>org.springframework</groupId>
     			<artifactId>spring-core</artifactId>
-    			<version>4.1.6.RELEASE</version>
+				<version>${spring.version}</version>
     		</dependency>
     		<dependency>
     			<groupId>org.springframework</groupId>
     			<artifactId>spring-aop</artifactId>
-    			<version>4.1.6.RELEASE</version>
+				<version>${spring.version}</version>
     		</dependency>
     		<dependency>
     			<groupId>org.springframework</groupId>
     			<artifactId>spring-beans</artifactId>
-    			<version>4.1.6.RELEASE</version>
+				<version>${spring.version}</version>
     		</dependency>
     		<dependency>
     			<groupId>org.springframework</groupId>
     			<artifactId>spring-context</artifactId>
-    			<version>4.1.6.RELEASE</version>
+				<version>${spring.version}</version>
     		</dependency>
     		<dependency>
     			<groupId>org.springframework</groupId>
     			<artifactId>spring-expression</artifactId>
-    			<version>4.1.6.RELEASE</version>
+				<version>${spring.version}</version>
     		</dependency>
     		<dependency>
     			<groupId>org.springframework</groupId>
     			<artifactId>spring-framework-bom</artifactId>
-    			<version>4.1.6.RELEASE</version>
+				<version>${spring.version}</version>
     		</dependency>
     		<dependency>
     			<groupId>org.springframework</groupId>
     			<artifactId>spring-web</artifactId>
-    			<version>4.1.6.RELEASE</version>
+				<version>${spring.version}</version>
     		</dependency>
     		<dependency>
     			<groupId>org.springframework</groupId>
     			<artifactId>spring-jdbc</artifactId>
-    			<version>4.1.6.RELEASE</version>
+				<version>${spring.version}</version>
     		</dependency>
     		<dependency>
     			<groupId>org.springframework</groupId>
     			<artifactId>spring-tx</artifactId>
-    			<version>4.1.6.RELEASE</version>
+				<version>${spring.version}</version>
     		</dependency>
     		<dependency>
     			<groupId>org.springframework</groupId>
     			<artifactId>spring-context-support</artifactId>
-    			<version>4.1.6.RELEASE</version>
+				<version>${spring.version}</version>
     		</dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-messaging</artifactId>
+				<version>${spring.version}</version>
             </dependency>
         <dependency>
           <groupId>org.apache.tomcat.maven</groupId>
@@ -354,8 +380,8 @@
         </dependency>
     	</dependencies>
     </dependencyManagement>
-	<profiles>
-		<profile>
+<!--	<profiles>
+		<profile>-->
 			<!-- When built in OpenShift the 'openshift' profile will be used when 
 				invoking mvn. -->
 			<!-- Use this profile for any OpenShift specific customization your app 
@@ -363,10 +389,15 @@
 			<!-- By default that is to put the resulting archive into the 'webapps' 
 				folder. -->
 			<!-- http://maven.apache.org/guides/mini/guide-building-for-different-environments.html -->
-			<id>openshift</id>
+	<!--		<id>openshift</id>
 			<build>
 				<finalName>jbossews</finalName>
         <plugins>
+            <plugin>
+                <groupId>com.heroku.sdk</groupId>
+                <artifactId>heroku-maven-plugin</artifactId>
+                <version>0.5.3</version>
+            </plugin>
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>
@@ -383,22 +414,21 @@
 							<warName>ROOT</warName>
 						</configuration>
 					</plugin> 
-          <!-- To define the plugin version in your parent POM -->
+          &lt;!&ndash; To define the plugin version in your parent POM &ndash;&gt;
           <plugin>
             <groupId>org.apache.tomcat.maven</groupId>
             <artifactId>tomcat7-maven-plugin</artifactId>
             <version>2.0</version>
             <configuration>
-              <!-- Tomcat 7 has a different manager path - text - than other versions -->
+              &lt;!&ndash; Tomcat 7 has a different manager path - text - than other versions &ndash;&gt;
               <url>http://localhost:8080/manager/text</url>
               <server>localhost</server>
-              <!-- Refer to the server settings in your ~/.m2/settings.xml -->
+              &lt;!&ndash; Refer to the server settings in your ~/.m2/settings.xml &ndash;&gt;
               <path>/${project.build.finalName}</path>
-
             </configuration>
           </plugin>
 				</plugins>
 			</build>
 		</profile>
-	</profiles>
+	</profiles>-->
 </project>

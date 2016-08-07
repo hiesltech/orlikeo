@@ -1,16 +1,11 @@
 package umk.zychu.inzynierka.model;
 
-import java.util.List;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
 import org.hibernate.annotations.LazyCollection;
 import org.hibernate.annotations.LazyCollectionOption;
 import org.hibernate.validator.constraints.NotBlank;
+
+import javax.persistence.*;
+import java.util.List;
 
 @SuppressWarnings("serial")
 @Entity
@@ -35,25 +30,50 @@ public class Orlik extends BaseEntity {
 	Boolean shower;
 	
 	@Column(name = "required_shoes")	
-	String shoes;
+	String shoes = "turf";
 	
 	@LazyCollection(LazyCollectionOption.FALSE)
-	@OneToMany(mappedBy = "orlik")
+	@OneToMany(mappedBy = "orlik", orphanRemoval = true)
 	private List<Graphic> graphicCollection;
 	
-	@ManyToMany
+/*	@ManyToMany
 	@LazyCollection(LazyCollectionOption.FALSE)
 	@JoinTable(name = "orlik_manager", joinColumns = { @JoinColumn(name = "orlik_id", referencedColumnName = "id", nullable = false) }, 
 	inverseJoinColumns = { @JoinColumn(name = "user_id", referencedColumnName = "id", nullable = false) })
-	List<User> orlikManagers;
-	
-	public List<User> getOrlikManagers() {
+	List<User> orlikManagers;*/
+
+	/*	public List<User> getOrlikManagers() {
 		return orlikManagers;
 	}
 
 	public void setOrlikManagers(List<User> orlikManagers) {
 		this.orlikManagers = orlikManagers;
+	}*/
+
+
+	@OneToOne
+	@JoinColumn(name = "animator_id", nullable = true, unique = true)
+	User animator;
+
+	public Orlik(String address, String city, Boolean lights, Boolean water, Boolean shower, String shoes, User animator, List<Graphic> graphicCollection) {
+		this.address = address;
+		this.city = city;
+		this.lights = lights;
+		this.water = water;
+		this.shower = shower;
+		this.shoes = shoes;
+		this.animator = animator;
+		this.graphicCollection = graphicCollection;
 	}
+
+	public User getAnimator() {
+		return animator;
+	}
+
+	public void setAnimator(User animator) {
+		this.animator = animator;
+	}
+	
 
 	public Orlik(){
 		super();
@@ -120,4 +140,5 @@ public class Orlik extends BaseEntity {
 	public void setGraphicCollection(List<Graphic> graphicCollection) {
 		this.graphicCollection = graphicCollection;
 	}
+
 }

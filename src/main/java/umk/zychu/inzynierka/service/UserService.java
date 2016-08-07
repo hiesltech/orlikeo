@@ -8,10 +8,13 @@ import umk.zychu.inzynierka.model.User;
 public interface UserService {	
 	User getUser(String email);
 	User getUser(Integer id);
-	void saveUser(User user);
+	User saveUser(User user);
 	Boolean checkIfUserExists(String email);
 	void createNewUser(RegisterUserBean registerUserBean);
 	Boolean checkOldPasswordCorrectness(String oldPassword);
 	void changePassword(ChangePasswordForm form);
 	void updateUserDetails(EditAccountForm form);
+	void removeAccount();
+
+	void delete(User user);
 }

@@ -11,16 +11,17 @@
 <div class="row">
 	<div class="col-lg-12">
 		<h1 class="page-header">
-			Wybierz orlik ${ eventId } <small><i
+			Wybierz orlik <small><i
 				class="glyphicon glyphicon-picture"></i></small>
 		</h1>
 	</div>
 </div>
-<div class="container">
+
 	<div class="row">
-		<div class="well well-sx">
+		<div class="col-lg-12">
+		<div class="well well-lg">
 			<div class="row">
-				<div class="col-md-12">
+				<div class="col-lg-12">
 					<form:form  modelAttribute="choosenOrlikBean" action="${terminarzUrl}" method="POST" >
 						<div class="form-group">
 							<form:errors path="Id" cssClass="error" />

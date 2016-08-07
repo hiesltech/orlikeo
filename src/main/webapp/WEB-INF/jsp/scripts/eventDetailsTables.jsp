@@ -6,15 +6,31 @@
 
 <script type="text/javascript">
     $(document).ready( function () {
-        $('#goingToComeTable').DataTable();
+        $('#goingToComeTable').dataTable( {
+            "language": {
+                "url": "https://cdn.datatables.net/plug-ins/1.10.9/i18n/Polish.json"
+            }
+        } );
     } );
     $(document).ready( function () {
-        $('#withoutDecisionTable').DataTable();
+        $('#withoutDecisionTable').dataTable( {
+            "language": {
+                "url": "https://cdn.datatables.net/plug-ins/1.10.9/i18n/Polish.json"
+            }
+        } );
     } );
     $(document).ready( function () {
-        $('#rejectedTable').DataTable();
+        $('#rejectedTable').dataTable( {
+            "language": {
+                "url": "https://cdn.datatables.net/plug-ins/1.10.9/i18n/Polish.json"
+            }
+        } );
     } );
     $(document).ready( function () {
-        $('#canInviteTable').DataTable();
+        $('#canInviteTable').dataTable( {
+            "language": {
+                "url": "https://cdn.datatables.net/plug-ins/1.10.9/i18n/Polish.json"
+            }
+        } );
     } );
 </script>

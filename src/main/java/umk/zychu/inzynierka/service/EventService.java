@@ -14,7 +14,10 @@ import java.util.Optional;
 
 public interface EventService {
 	void acceptEvent(Integer id);
-	void deleteEventById(Integer id);
+	void delete(Integer id);
+
+	void changeConcurrentEvents(Event event);
+
 	List<Event> findAll();
 	RegisterEventForm generateRegisterEventForm(Event event);
 	List<UserGameDetails> generateUserGameDetailsList(List<UserEvent> userEvents);
@@ -29,4 +32,5 @@ public interface EventService {
 	Event save(Event event);
 	void updateEvent(RegisterEventForm form);
 	void delete(Event e);
+	Event findOne(Integer id);
 }

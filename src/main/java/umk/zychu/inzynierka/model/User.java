@@ -1,6 +1,6 @@
 package umk.zychu.inzynierka.model;
- 
- 
+
+
 import org.hibernate.annotations.LazyCollection;
 import org.hibernate.annotations.LazyCollectionOption;
 import org.hibernate.validator.constraints.Email;
@@ -12,6 +12,7 @@ import javax.validation.constraints.Size;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @SuppressWarnings("serial")
 @Entity
@@ -51,37 +52,69 @@ public class User extends BaseEntity
 	
 	@Column(name = "foot")
 	String foot;
-	
-	@OneToMany(mappedBy="friendRequester", fetch = FetchType.EAGER)
+
+	public void setFriendRequesterList(List<Friendship> friendRequesterList) {
+		this.friendRequesterList = friendRequesterList;
+	}
+
+	public void setFriendAccepterList(List<Friendship> friendAccepterList) {
+		this.friendAccepterList = friendAccepterList;
+	}
+
+	@OneToMany(mappedBy="friendRequester", fetch = FetchType.EAGER, orphanRemoval = true, cascade = CascadeType.ALL)
 	private List<Friendship> friendRequesterList;
 
-	@OneToMany(mappedBy="friendAccepter", fetch = FetchType.EAGER)
+	@OneToMany(mappedBy="friendAccepter", fetch = FetchType.EAGER, orphanRemoval = true, cascade = CascadeType.ALL)
 	private List<Friendship> friendAccepterList;
-	
-	@OneToMany(mappedBy = "actionUser", fetch = FetchType.EAGER)
+
+	@OneToMany(mappedBy = "actionUser", fetch = FetchType.EAGER, orphanRemoval = true, cascade = CascadeType.ALL)
 	private List<Friendship> actionUsersList;
 	
-	@ManyToMany(mappedBy = "orlikManagers")
-    private List<Orlik> isOrliksManager;
-	
+	/*@ManyToMany(mappedBy = "orlikManagers")
+    private List<Orlik> isOrliksManager;*/
+
+
+
 	@OneToMany(mappedBy = "inviter", fetch = FetchType.EAGER)
 	private List<UserEvent> usersEventsFriendsInvited;
-	
-	@OneToMany(mappedBy="userOrganizer", fetch = FetchType.EAGER)
-	private List<Event> organizedEventsList; 
-	
+
+	@OneToMany(mappedBy="userOrganizer", fetch = FetchType.EAGER, orphanRemoval = true)
+	private List<Event> organizedEventsList;
+
 	@LazyCollection(LazyCollectionOption.FALSE)
-	@OneToMany(mappedBy = "user")
+	@OneToMany(mappedBy = "user", orphanRemoval = true)
 	private List<UserEvent> userEvents;
 
-	@OneToMany(mappedBy = "user")
+	public List<UserNotification> getUserNotifications() {
+		return userNotifications;
+	}
+
+	public void setUserNotifications(List<UserNotification> userNotifications) {
+		this.userNotifications = userNotifications;
+	}
+
+	@OneToMany(mappedBy = "user", fetch = FetchType.EAGER, orphanRemoval = true)
 	private List<UserNotification> userNotifications;
+
 	
 	public List<Friendship> getFriendships(){
 		List<Friendship> friendships = new ArrayList<Friendship>();
 		friendships.addAll(getFriendAccepterList());
 		friendships.addAll(getFriendRequesterList());
 		return friendships;
+	}
+
+	public List<User> getUserFriends(){
+		User user = this;
+		return getFriendships().stream()
+				.map(f -> {
+					if(f.getFriendAccepter().equals(user)) {
+						return f.getFriendRequester();
+					}
+					else {
+						return f.getFriendAccepter();
+					}
+				}).collect(Collectors.toList());
 	}
 	
 	public List<Event> getOrganizedEventsList() {
@@ -91,13 +124,13 @@ public class User extends BaseEntity
 		this.organizedEventsList = organizedEventsList;
 	}
 
-	public List<Orlik> getIsOrliksManager() {
+/*	public List<Orlik> getIsOrliksManager() {
 		return isOrliksManager;
 	}
 
 	public void setIsOrliksManager(List<Orlik> isOrliksManager) {
 		this.isOrliksManager = isOrliksManager;
-	}
+	}*/
 
 	//getter and setter methods
 	public String getEmail() {
@@ -148,7 +181,7 @@ public class User extends BaseEntity
 		this.position = position;
 	}
 	
-	public int getWeight() {
+	public Integer getWeight() {
 		return weight;
 	}
 	

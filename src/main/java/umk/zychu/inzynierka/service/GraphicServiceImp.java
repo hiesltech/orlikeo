@@ -10,7 +10,6 @@ import java.util.List;
 
 
 @Service
-@Transactional
 public class GraphicServiceImp implements GraphicService{
 
 	@Autowired
@@ -44,6 +43,7 @@ public class GraphicServiceImp implements GraphicService{
 	}
 
 	@Override
+	@Transactional
 	public void delete(Graphic entity) {
 		reduceConnectedEvents(entity);
 		graphicDAO.delete(entity);

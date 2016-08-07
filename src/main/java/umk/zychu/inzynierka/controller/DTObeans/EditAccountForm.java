@@ -1,7 +1,6 @@
 package umk.zychu.inzynierka.controller.DTObeans;
 
 import java.util.Date;
-import org.springframework.format.annotation.DateTimeFormat;
 
 public class EditAccountForm {
 
@@ -65,7 +64,6 @@ public class EditAccountForm {
 	}
 	String name;
 	String surname;
-	@DateTimeFormat(pattern = "dd.MM.yyyy")
 	Date dateOfBirth;
 	String position;
 	Integer weight;

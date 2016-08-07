@@ -12,7 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class LoginController {
 
-	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	@RequestMapping(value = "/signing", method = RequestMethod.GET)
 	public ModelAndView login(@RequestParam(value = "error", required = false) String error ) {
 		ModelAndView model = new ModelAndView();
 		if (error != null) {

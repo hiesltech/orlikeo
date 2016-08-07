@@ -50,6 +50,8 @@ public class EventsController {
 	private UserEventRoleService roleService;
 	@Autowired
 	private EventToApproveService eventToApproveService;
+	@Autowired
+	private UserNotificationsService userNotificationsService;
 	
 	@Autowired
 	private ChoosenOrlikBeanValidator choosenOrlikBeanValidator;
@@ -132,7 +134,7 @@ public class EventsController {
 				decisionId = UserDecision.ACCEPTED;
 			} else {
 				decisionId = UserDecision.REJECTED;
-			};
+			}
 			UserDecision userDecision = decisionService.findOne(decisionId);
 			userEventService.setUserEventDecision(event, userDecision);
 		}
@@ -166,8 +168,8 @@ public class EventsController {
 				model.addAttribute("details", gameDetails);
 				if(event.getGraphic() != null){
 					Orlik orlik = event.getGraphic().getOrlik();
-					List<User> managers = orlikService.getOrlikManagersByOrlik(orlik);
-					model.addAttribute("managers", managers);
+					User animator = orlik.getAnimator();
+					model.addAttribute("animator", animator);
 				}
 				UserDecision accepted = decisionService.findOne(UserDecision.ACCEPTED);
 				List<User> usersJoinedDecision = userEventService.findUsersByEventAndDecision(event, accepted);
@@ -196,6 +198,7 @@ public class EventsController {
 				else{
 					model.addAttribute("isOrganizer", false);
 				}
+				userNotificationsService.setCheckedForEvent(event);
 			}
 		}catch(Exception e){
 			logger.debug("EXCEPTION " + e);
@@ -209,7 +212,7 @@ public class EventsController {
 			@RequestParam(value = "state", required = false) Integer stateId,
 			@RequestParam(value="page", required=false) String page) {
 		try{
-			eventService.deleteEventById(id);
+			eventService.delete(id);
 		}
 		catch(Exception e){
 			e.printStackTrace();
@@ -249,8 +252,8 @@ public class EventsController {
 			model.addAttribute("editEventForm", form);
 			Graphic graphic = event.getGraphic();
 			Orlik orlik = graphic == null ? null : graphic.getOrlik();	
-			List<User> managers = orlik == null ? new ArrayList<User>() : orlik.getOrlikManagers();
-			model.addAttribute("managers", managers);
+			User animator = orlik == null ? null : orlik.getAnimator();
+			model.addAttribute("animator", animator);
 			boolean isOrganizer = event.getUserOrganizer().equals(loggedUser);
 			model.addAttribute("isOrganizer", isOrganizer);
 			model.addAttribute("editFormUser", loggedUser.getEmail());
@@ -282,7 +285,7 @@ public class EventsController {
 	}
 	
 	@RequestMapping(value = "/reserve/{eventId}/{graphicId}", method = RequestMethod.GET)
-	public String reserve(@PathVariable("eventId") Integer eventId, @PathVariable("graphicId") Integer graphicId,  Model model) {
+	public String reserve(@PathVariable("eventId") Integer eventId, @PathVariable("graphicId") Integer graphicId,  Model model, RedirectAttributes redir) {
 		try {
 			Optional<Event> ev = eventService.getEventById(eventId);
 			if(ev.isPresent()){
@@ -294,10 +297,14 @@ public class EventsController {
 				UserDecision accepted = decisionService.findOne(UserDecision.ACCEPTED);
 				UserDecision invited = decisionService.findOne(UserDecision.INVITED);
 				event.getUsersEvent().stream()
-					.filter(ue -> !ue.getUser().equals(ue.getEvent().getUserOrganizer()) 
+					.filter(ue -> ue.getInviter() != null
 							&& (ue.getDecision().equals(rejected) || ue.getDecision().equals(accepted)))
-					.forEach(ue -> ue.setDecision(invited));
+					.forEach(ue -> {
+						ue.setDecision(invited);
+					});
+
 				event = eventService.save(event);
+				userNotificationsService.eventGraphicChangedByOrganizer(event);
 				if(eventToApproveService.findByEvent(event).isPresent()){
 					eventToApproveService.removeEventFromWaitingForCheckByManager(event);
 				}
@@ -305,6 +312,7 @@ public class EventsController {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		redir.addFlashAttribute("saved","true");
 		return "redirect:/events/edit/" + eventId;
 	}
 
@@ -327,11 +335,12 @@ public class EventsController {
 			model.addAttribute("event", graphicEntity);
 			model.addAttribute("registerEventForm", form);
 			model.addAttribute("reserve", true);
-			List<User> managers = orlikService.getOrlikManagersByOrlik(orlik);
-			model.addAttribute("managers", managers);
+			User animator = orlik.getAnimator();
+			model.addAttribute("animator", animator);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		model.addAttribute("saved", "true");
 		return "reserve";
 	}
 }

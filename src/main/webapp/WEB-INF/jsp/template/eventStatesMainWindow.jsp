@@ -4,6 +4,7 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
+
 <div class="row">
 	<div class="col-lg-12">
 		<h1 class="page-header">
@@ -16,9 +17,6 @@
 		</h1>
 	</div>
 </div>
-
-
-
 
 <div class="row">
 	<div class="col-lg-12">
@@ -48,8 +46,8 @@
 						<c:set var="label"  value="${ windowBlock.label }"/>
 						<c:set var="incoming"  value="${ windowBlock.incoming }"/>
 
-							
-				<div class="col-md-2">
+
+				<div class="col-lg-2">
 						<c:choose>
 							<c:when test="${ displayOrder  == 5 }">
 								<div class="panel panel-primary" id="primaryBlock">
@@ -72,7 +70,7 @@
 						</c:choose>
 						<div class="panel-heading">
 							<div class="row">
-								<div class="col-xs-3">	
+								<div class="col-xs-3">
 									<c:choose>
 										<c:when test="${ displayOrder  == 5 }">
 											<i style="font-size: 2.5em;" class="glyphicon glyphicon-plane"></i>
@@ -126,7 +124,7 @@
 							<c:otherwise>
 							<a href="#">
 						</c:otherwise>
-					</c:choose>	
+					</c:choose>
 							<div class="panel-footer">
 								<span class="pull-left">WSZYSTKIE (${ inSameState })</span>
                                 <span class="pull-right"><i class="glyphicon glyphicon-eye-open"></i></span>
@@ -136,7 +134,7 @@
 						</div>
 					</div>
 			</c:forEach>
-			
+
 			</div>
 		</div>
 	</div>

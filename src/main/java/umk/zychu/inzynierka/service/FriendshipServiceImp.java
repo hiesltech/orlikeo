@@ -1,19 +1,20 @@
 package umk.zychu.inzynierka.service;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import umk.zychu.inzynierka.model.Friendship;
 import umk.zychu.inzynierka.model.User;
 import umk.zychu.inzynierka.repository.FriendshipDaoRepository;
 
+import javax.transaction.Transactional;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
 @Service
-@Transactional
+
 public class FriendshipServiceImp implements FriendshipService{
 
 	@Autowired
@@ -22,6 +23,8 @@ public class FriendshipServiceImp implements FriendshipService{
 	UserService userService;
 	@Autowired
 	UserEventService userEventService;
+	@Autowired
+	UserNotificationsService userNotificationsService;
 
 	@Override
 	public List<User> getFriendsByState(Integer state){
@@ -84,19 +87,22 @@ public class FriendshipServiceImp implements FriendshipService{
 	@Override
 	public void inviteUserToFriends(User user, User invitedUser) {
 		try{
+			Friendship friendship = null;
 			if(checkIfTheyHadContacted(user, invitedUser)){
 				Optional<Friendship> friendshipOpt = user.getFriendships().stream()
 						.filter(f -> f.getFriendAccepter().equals(invitedUser) 
 								|| f.getFriendRequester().equals(invitedUser))
 						.findFirst();
 				if(friendshipOpt.isPresent()){
-					Friendship friendship = friendshipOpt.get();
-					changeFriendshipStatus(friendship, Friendship.INVITED);
+					friendship = friendshipOpt.get();
+					friendship = changeFriendshipStatus(friendship, Friendship.INVITED);
 				}
 			}else{
-				Friendship friendship = new Friendship(user, invitedUser);
-				friendshipDAO.save(friendship);
+				friendship = new Friendship(user, invitedUser);
+				friendship = friendshipDAO.save(friendship);
 			}
+			if(friendship != null)
+				userNotificationsService.invitation(friendship);
 		}catch(Exception e){
 			e.printStackTrace();
 		}
@@ -113,7 +119,8 @@ public class FriendshipServiceImp implements FriendshipService{
 		if(friendship.isPresent())
 		{
 			Friendship f = friendship.get();
-			changeFriendshipStatus(f, Friendship.ACCEPTED);
+			f = changeFriendshipStatus(f, Friendship.ACCEPTED);
+			userNotificationsService.acceptation(f);
 		}
 	}
 
@@ -136,19 +143,21 @@ public class FriendshipServiceImp implements FriendshipService{
 		User user = userService.getUser(SecurityContextHolder.getContext().getAuthentication().getName());
 		User userForCancel = userService.getUser(email);
 		Optional<Friendship> friendshipOpt =  user.getFriendships().stream()
-						.filter(f -> 
-							(f.getFriendAccepter().equals(userForCancel) 
-									|| f.getFriendRequester().equals(userForCancel))
-								&& f.getState() == Friendship.INVITED)
+						.filter(f ->
+								(f.getFriendAccepter().equals(userForCancel)
+										|| f.getFriendRequester().equals(userForCancel))
+										&& f.getState() == Friendship.INVITED)
 						.findAny();
 		if(friendshipOpt.isPresent()){
 			Friendship f = friendshipOpt.get();
+			userNotificationsService.cancelInvitation(user, userForCancel);
 			friendshipDAO.delete(f);
 		}	
 	}
 
 	// to do
 	@Override
+	@Transactional
 	public void blockUser(String email) {
 		User user = userService.getUser(SecurityContextHolder.getContext().getAuthentication().getName());
 		User userForBlock = userService.getUser(email);
@@ -179,11 +188,15 @@ public class FriendshipServiceImp implements FriendshipService{
 					.findFirst();
 			if(friendshipOpt.isPresent()){
 				Friendship friendship = friendshipOpt.get();
-				changeFriendshipStatus(friendship, Friendship.BLOCKED);
+				friendship = changeFriendshipStatus(friendship, Friendship.BLOCKED);
+				userNotificationsService.blocking(friendship);
 			}
 		}else{
-			this.inviteUserToFriends(user, userForBlock);
-			this.blockUser(email);
+			Friendship friendship = new Friendship(user, userForBlock);
+			friendship = friendshipDAO.save(friendship);
+			friendship.setState(Friendship.BLOCKED);
+			friendship = friendshipDAO.save(friendship);
+			userNotificationsService.blocking(friendship);
 		}
 	}
 
@@ -195,7 +208,8 @@ public class FriendshipServiceImp implements FriendshipService{
 			.filter(f -> f.getActionUser().equals(userRequest) && f.getState() == Friendship.INVITED).findFirst();
 		if(friendshipOpt.isPresent()){
 			Friendship friendship = friendshipOpt.get();
-			changeFriendshipStatus(friendship, Friendship.DECLINED);
+			friendship = changeFriendshipStatus(friendship, Friendship.DECLINED);
+			userNotificationsService.denial(friendship);
 		}
 	}
 
@@ -213,12 +227,11 @@ public class FriendshipServiceImp implements FriendshipService{
 		return blockedUsers;
 	}
 
-	private void changeFriendshipStatus(Friendship friendship, int status) {
+	private Friendship changeFriendshipStatus(Friendship friendship, int status) {
 		User user = userService.getUser(SecurityContextHolder.getContext().getAuthentication().getName());
 		friendship.setState(status);
 		friendship.setActionUser(user);
-		friendshipDAO.save(friendship);
-		
+		return friendshipDAO.save(friendship);
 	}
 	
 	@Override
@@ -228,8 +241,10 @@ public class FriendshipServiceImp implements FriendshipService{
 		Optional<Friendship> friendshipOpt = user.getFriendships().stream()
 							.filter(f -> f.getFriendAccepter().equals(userForRemove) 
 										|| f.getFriendRequester().equals(userForRemove)).findFirst();
-		if(friendshipOpt.isPresent())
+		if(friendshipOpt.isPresent()) {
+			userNotificationsService.remove(user, userForRemove);
 			friendshipDAO.delete(friendshipOpt.get());
+		}
 	}
 
 	@Override
@@ -240,6 +255,9 @@ public class FriendshipServiceImp implements FriendshipService{
 							.filter(f -> f.getFriendAccepter().equals(userForUnblock)
 									|| f.getFriendRequester().equals(userForUnblock))
 							.findFirst()
-							.ifPresent(f -> friendshipDAO.delete(f));	
+							.ifPresent(f -> {
+								userNotificationsService.unblocking(f);
+								friendshipDAO.delete(f);
+							});
 	}
 }

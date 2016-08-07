@@ -4,7 +4,6 @@ import com.dhtmlx.planner.DHXEv;
 import com.dhtmlx.planner.DHXEvent;
 import com.dhtmlx.planner.DHXEventsManager;
 import com.dhtmlx.planner.DHXStatus;
-import org.springframework.transaction.annotation.Transactional;
 import umk.zychu.inzynierka.controller.DTObeans.DHXCustomEvent;
 import umk.zychu.inzynierka.model.*;
 
@@ -14,7 +13,7 @@ import java.util.Collection;
 import java.util.Date;
 import java.util.Iterator;
 
-@Transactional
+
 public class EventsManager extends DHXEventsManager {
 
 	private AllServices services;
@@ -47,10 +46,10 @@ public class EventsManager extends DHXEventsManager {
 			Iterator<Graphic> i = orlikGraphics.iterator();
 			while (i.hasNext()) {
 				Graphic graphic = (Graphic) i.next();
-                if(graphic.getEvents().size() == 1 && (graphic.getEvents().get(0).getState().equals(approved) || graphic.getEvents().get(0).getState().equals(treatened))){
-                    graphic.setAvailable(false);
-                    graphic.setTitle("Rezerwacja: " + graphic.getEvents().get(0).getUserOrganizer().getEmail());
-                }
+/*                if(graphic.getEvents().size() == 1 && (graphic.getEvents().get(0).getState().equals(approved) || graphic.getEvents().get(0).getState().equals(treatened))){
+                    *//*graphic.setAvailable(false);*//*
+                    graphic.setTitle(graphic.getEvents().get(0).getUserOrganizer().getEmail());
+                }*/
 				DHXCustomEvent dhxEvent = new DHXCustomEvent(graphic);
 				dhxEvents.add(dhxEvent);
 			}
@@ -87,13 +86,16 @@ public class EventsManager extends DHXEventsManager {
 	private void updateWithDependencies(DHXEv dhxEvent) {
 		Graphic graphic = services.getGraphicService()
 				.findOne(dhxEvent.getId());
-		graphic.setAvailable(allowReservation);
 		Date oldStartTime = graphic.getStartTime();
 		Date oldEndTime = graphic.getEndTime();
+		Boolean oldAvailability = graphic.getAvailable();
+		graphic.setAvailable(allowReservation);
 		graphic.setStartTime(dhxEvent.getStart_date());
 		graphic.setEndTime(dhxEvent.getEnd_date());
 		graphic.setTitle(dhxEvent.getText());
 		graphic = services.getGraphicService().save(graphic);
+		//notify users
+		services.getUserNotificationsService().graphicChangedByAnimator(graphic);
 		EventState inBasketState = services.getStateDAO().findOne(
 				EventState.IN_A_BASKET);
 		EventState readyToAcceptState = services.getStateDAO().findOne(
@@ -114,14 +116,17 @@ public class EventsManager extends DHXEventsManager {
 					ue.setDecision(invited);
 					services.getUserEventService().save(ue);
 				});
-		if (graphic.getAvailable()
-				&& graphic.getStartTime().compareTo(oldStartTime) != 0
-				&& graphic.getEndTime().compareTo(oldEndTime) != 0) {
+
+		//TODO jeśli został zmieniony czas lub już nie jest dostępny
+		//jeśli zmieniony czas to cofasz do stanu przed , ale nie wywalasz do kosza,
+		//jeśli niedostępny to do kosza
+		if (!graphic.getAvailable().equals(oldAvailability)
+				|| graphic.getStartTime().compareTo(oldStartTime) != 0
+				|| graphic.getEndTime().compareTo(oldEndTime) != 0) {
 			graphic.getEvents()
 					.stream()
 					.forEach(
 							e -> {
-
 								if (e.getState().equals(readyToAcceptState)) {
 									services.getEventToApproveService()
 											.removeEventFromWaitingForCheckByManager(
@@ -130,9 +135,7 @@ public class EventsManager extends DHXEventsManager {
 								e.setState(inBasketState);
 								e.setGraphic(null);
 								services.getEventService().save(e);
-
 							});
 		}
-
 	}
 }

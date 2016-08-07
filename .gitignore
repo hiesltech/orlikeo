@@ -4,3 +4,6 @@ target
 !.settings/.jsdtscope .idea/
 .project
 .classpath
+.idea/*
+.openshift/*
+.springBeans

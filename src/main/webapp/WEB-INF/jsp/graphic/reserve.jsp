@@ -13,15 +13,7 @@
 <div class="row">
 	<div class="col-lg-12">
 		<h1 class="page-header">
-
-			
-<%-- 		<c:if test="${ not reserve }">
-			<a href="${createEventUrl}"><i class="glyphicon glyphicon-edit"></i></a>
-		</c:if> --%>
 			Orlik ${orlik.getCity()} ul.${orlik.getAddress()} <small>
-<%-- 		<c:if test="${ not reserve }">
-			<a href="${graphicEventUrl}"><i class="glyphicon glyphicon-edit"></i></a>
-		</c:if> --%>
 			<fmt:formatDate value="${ event.startTime }" type="both" pattern="HH.mm" /> - <fmt:formatDate value="${event.getEndTime()}" type="both" pattern="HH.mm" /> (<fmt:formatDate value="${event.getStartTime()}" type="both" pattern="dd.MM.yyyy" />)</small>
 		</h1>
 		
@@ -30,9 +22,7 @@
 			<li><i class="glyphicon glyphicon-info-sign"></i> Bieżąca woda: <c:out value="${orlik.getWater() == true ? 'TAK': 'NIE'}"/></li>
 			<li><i class="glyphicon glyphicon-info-sign"></i> Prysznic: <c:out value="${orlik.getShower() == true ? 'TAK': 'NIE'}"/></li>
 			<li><i class="glyphicon glyphicon-info-sign"></i> Obowiązujące obuwie: <c:out value="${orlik.getShoes()}"/></li>
-			<li><i class="glyphicon glyphicon-user"></i> Animatorzy:<c:forEach items="${managers}" var="manager" varStatus="i">
-																		<c:out value="${manager.email}"/><c:if test="${ i.index < managers.size()-1 }">, </c:if>
-																	</c:forEach></li>
+			<li><i class="glyphicon glyphicon-user"></i> Animatorzy:<c:if test="${not empty animator}" > <c:out value="${animator.email}" /></c:if> </li>
 		</ul>
 	</div>
 </div>

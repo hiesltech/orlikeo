@@ -3462,7 +3462,7 @@ scheduler.locale = {
 		icon_delete:"Delete",
 		confirm_closing:"",//Your changes will be lost, are your sure ?
 		confirm_deleting:"Event will be deleted permanently, are you sure?",
-		section_description:"Description",
+		section_description:"Opis",
 		section_time:"Time period",
 		full_day:"Full day",
 
@@ -3477,7 +3477,7 @@ scheduler.locale = {
 		/*agenda view extension*/
 		agenda_tab:"Agenda",
 		date:"Date",
-		description:"Description",
+		description:"Opis",
 
 		/*year view extension*/
 		year_tab:"Year",

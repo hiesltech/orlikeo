@@ -4,7 +4,6 @@
 <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"  %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
 <c:url value="/" var="register" />
 <c:url value="/help" var="helpUrl" />
@@ -22,7 +21,7 @@
 				<div class="form-group">
 					<form:label path="email"><spring:message code="web.register.email.label"/></form:label>
 					<br/>
-					<form:errors path="email" cssClass="error" />
+					<form:errors path="email" class="text-danger" />
 					<spring:message code="web.register.email.placeholder" var="emailPlaceholder"/>
 					<form:input path="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}" required="required"  placeholder="${emailPlaceholder}"  class="form-control" />
 				</div>
@@ -30,7 +29,7 @@
 				<div class="form-group">
 					<form:label path="password"><spring:message code="web.register.password.label"/></form:label>
 					<br/>
-					<form:errors path="password" cssClass="error"/>
+					<form:errors path="password" class="text-danger"/>
 					<spring:message code="web.register.password.placeholder" var="passwordPlaceholder"/>
 					<form:password path="password" required="required" placeholder="${passwordPlaceholder}" class="form-control" />
 				</div>
@@ -38,7 +37,7 @@
 				<div class="form-group">
 					<label><spring:message code="web.register.repeated_password.label"/></label>
 					<br/>
-					<form:errors path="repeatedPassword" cssClass="error"/>
+					<form:errors path="repeatedPassword" class="text-danger" />
 					<spring:message code="web.register.repeated_password.placeholder" var="repeatedPasswordPlaceholder" />
 					<form:password path="repeatedPassword" required="required" placeholder="${repeatedPasswordPlaceholder}" class="form-control"  />
 				</div>
@@ -47,7 +46,7 @@
 					<form:checkbox path="acceptRegulation"/>
 					<label><spring:message code="web.register.regulation.accept"/> <a href="${regulation}"><spring:message code="web.register.regulation.link_label"/></a></label>
 					<br/>
-					<form:errors path="acceptRegulation" cssClass="error"/>
+					<form:errors path="acceptRegulation" class="text-danger"/>
 				</div>
 			
 				<button class="btn btn-lg btn-success btn-block" type="submit">

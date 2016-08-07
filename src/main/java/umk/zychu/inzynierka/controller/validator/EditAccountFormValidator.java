@@ -5,7 +5,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
-
 import umk.zychu.inzynierka.controller.DTObeans.EditAccountForm;
 import umk.zychu.inzynierka.service.UserService;
 
@@ -13,7 +12,7 @@ import umk.zychu.inzynierka.service.UserService;
 public class EditAccountFormValidator implements Validator{
 
 	@Autowired 
-	UserService userService;;
+	UserService userService;
 	
 	private static final String EMPTY_OR_WHITESPACES_AGE_WEIGHT_OR_HEIGHT = "web.account.edit.empty";
 	private static final String NOT_AN_INTEGER_VALUE = "web.account.validation.birthdate.integerOnly";
@@ -50,4 +49,5 @@ public class EditAccountFormValidator implements Validator{
 			errors.reject("height", NOT_AN_INTEGER_VALUE);
 		}
 	}
+
 }

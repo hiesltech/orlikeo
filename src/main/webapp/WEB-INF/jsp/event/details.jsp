@@ -66,8 +66,8 @@
 		    			<c:if test="${ not empty page }">
 		    				<c:set var="urlSuffix" value="${urlSuffix}&page=${ page }" />
 		    			</c:if>
-		    			<c:set var="acceptDecisionUrl" value="${eventDecisionUrl}/${eventId}${accept}${urlSuffix}" />
-		    			<c:set var="rejectDecisionUrl" value="${eventDecisionUrl}/${eventId}${reject}${urlSuffix}" />
+		    			<c:set var="acceptDecisionUrl" value="${eventDecisionUrl}${eventId}${accept}${urlSuffix}" />
+		    			<c:set var="rejectDecisionUrl" value="${eventDecisionUrl}${eventId}${reject}${urlSuffix}" />
 						
 						<c:choose>
 							<c:when test="${ decisionId == 1 }">
@@ -99,12 +99,6 @@
 			<li><i class="glyphicon glyphicon-info-sign"></i> Bieżąca woda: <c:out value="${ water == true ? 'TAK': 'NIE'}"/></li>
 			<li><i class="glyphicon glyphicon-info-sign"></i> Prysznic: <c:out value="${ shower == true ? 'TAK': 'NIE'}"/></li>
 			<li><i class="glyphicon glyphicon-info-sign"></i> Obowiązujące obuwie: <c:out value="${ shoes }"/></li>
-<%-- 			<li><i class="glyphicon glyphicon-user"></i> Animatorzy:<c:forEach items="${managers}" var="manager" varStatus="i">
-																		<c:out value="${manager.email}"/>
-																		<c:if test="${ i.index < managers.size()-1 }">
-																		, 
-																		</c:if> 
-																	</c:forEach></li> --%>
 		</ul>
 		</c:if>
 		<ul>

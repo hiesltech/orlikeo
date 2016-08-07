@@ -1,47 +1,42 @@
 package umk.zychu.inzynierka.security;
 
-import java.util.Collection;
+public class CustomUserDetails /*extends SocialUser*/ {
 
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.social.security.SocialUser;
+/*    private static final long serialVersionUID = 1L;
 
-public class CustomUserDetails extends SocialUser {
+    private int id;
+    private String firstName;
+    private String lastName;
 
-	private static final long serialVersionUID = 1L;
+    public CustomUserDetails(String username, String password, Collection<? extends GrantedAuthority> authorities) {
+        super(username, password, authorities);
+    }
 
-	private int id;
-	private String firstName;
-	private String lastName;
+    public CustomUserDetails(String username, String password, boolean enabled, boolean accountNonExpired, boolean credentialsNonExpired, boolean accountNonLocked, Collection<? extends GrantedAuthority> authorities) {
+        super(username, password, enabled, accountNonExpired, credentialsNonExpired, accountNonLocked, authorities);
+    }
 
-	public CustomUserDetails(String username, String password, Collection<? extends GrantedAuthority> authorities) {
-		super(username, password, authorities);
-	}
+    public int getId() {
+        return id;
+    }
 
-	public CustomUserDetails(String username, String password, boolean enabled, boolean accountNonExpired, boolean credentialsNonExpired, boolean accountNonLocked, Collection<? extends GrantedAuthority> authorities) {
-		super(username, password, enabled, accountNonExpired, credentialsNonExpired, accountNonLocked, authorities);
-	}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public int getId() {
-		return id;
-	}
+    public String getFirstName() {
+        return firstName;
+    }
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
 
-	public String getFirstName() {
-		return firstName;
-	}
+    public String getLastName() {
+        return lastName;
+    }
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }*/
 }

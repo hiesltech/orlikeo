@@ -1,12 +1,9 @@
 package umk.zychu.inzynierka.model;
 
-import java.io.Serializable;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.io.Serializable;
 
 @SuppressWarnings("serial")
 @Entity 
@@ -15,15 +12,18 @@ public class Friendship extends BaseEntity implements Serializable{
 
 	@ManyToOne 
     @JoinColumn(name="user_id", referencedColumnName = "id")
+	@JsonIgnore
     private User friendRequester;
 	
 	@ManyToOne 
     @JoinColumn(name="friend_id", referencedColumnName = "id")
+	@JsonIgnore
     private User friendAccepter;
 	
 	
 	@ManyToOne 
     @JoinColumn(name="action_user_id", referencedColumnName = "id")
+	@JsonIgnore
     private User actionUser;
 	
 	@Column(name = "state")

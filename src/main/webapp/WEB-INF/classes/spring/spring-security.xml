@@ -1,0 +1,54 @@
+h<beans:beans xmlns:sec="http://www.springframework.org/schema/security"
+			 xmlns:beans="http://www.springframework.org/schema/beans"
+			 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			 xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+	http://www.springframework.org/schema/security
+	http://www.springframework.org/schema/security/spring-security-4.0.xsd" >
+
+	<beans:import resource="classpath:spring/websocket-context.xml" />
+
+	<sec:http pattern="/resources/**" security="none" />
+	<sec:http disable-url-rewriting="false">
+		<sec:headers disabled="false"/>
+		<sec:csrf disabled="false"/>
+		<sec:access-denied-handler error-page="/denied" />
+		<sec:intercept-url pattern="/signing" access="permitAll" requires-channel="https"/>
+        <sec:intercept-url pattern="/register" access="permitAll"/>
+        <sec:intercept-url pattern="/register/**" access="permitAll"/>
+		<sec:intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN')"/>
+		<sec:intercept-url pattern="/planner**" access="hasRole('ROLE_ANIMATOR')" />
+		<sec:intercept-url pattern="/pane**" access="hasRole('ROLE_ANIMATOR')" />
+        <sec:intercept-url pattern="/**" access="hasAnyRole('ROLE_USER', 'ROLE_ANIMATOR', 'ROLE_ADMIN')" />
+        <sec:port-mappings>
+            <sec:port-mapping http="8080" https="8443"/>
+        </sec:port-mappings>
+		<sec:form-login
+				login-page="/signing"
+				default-target-url="/"
+				always-use-default-target="true"
+				authentication-failure-url="/signing?error"
+				username-parameter="email"
+				password-parameter="password"
+				login-processing-url="/j_spring_security_check"
+				/>
+	 	<sec:logout logout-url="/j_spring_security_logout" logout-success-url="/signing"/>
+	</sec:http>
+
+	<!-- Password Hashing Bean -->
+	<beans:bean id="passwordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder" >
+		<beans:constructor-arg name="strength" value="12" />
+	</beans:bean>
+	<beans:bean id="myUserDetailsService" class="umk.zychu.inzynierka.security.myUserDetailsServiceImp"/>
+
+	<sec:authentication-manager>
+     <sec:authentication-provider user-service-ref="myUserDetailsService" >
+         <sec:password-encoder ref="passwordEncoder" />
+     </sec:authentication-provider>
+     <sec:authentication-provider>
+		  <sec:user-service>
+			<sec:user name="mkyong@o2.pl" password="123456" authorities="ROLE_USER" />
+		  </sec:user-service>
+		</sec:authentication-provider>
+</sec:authentication-manager>
+</beans:beans>

@@ -93,7 +93,7 @@ public class WindowsBlocksChannelInterceptor extends ChannelInterceptorAdapter {
         switch (sha.getCommand()) {
 		case CONNECT:
 			LOGGER.debug("MY STOMP Connect [sessionId: " + sessionId + "]");
-                if (sha.containsNativeHeader("page"))
+                if (sha.toNativeHeaderMap().containsKey("page"))
                     showSessionsPageHeader.put(sessionId, sha.getFirstNativeHeader("page"));
 
             break;
@@ -124,17 +124,5 @@ public class WindowsBlocksChannelInterceptor extends ChannelInterceptorAdapter {
 			System.out.println("MY CANT TAKE AN ACTION");
 			break;
 		}
-        debug(sha);
-        System.out.println();
-    }
-
-    private void debug(StompHeaderAccessor sha){
-        System.out.println("SHA: " + sha.toString());
-        System.out.println("Page headers: ");
-        showSessionsPageHeader.forEach((k, v) -> System.out.println("Page key: " + k + " value: " + v));
-        System.out.println("********* page ************");
-        System.out.println("Run workers: ");
-        blocksSessions.forEach((k, v) -> System.out.println("Wysyłanie key: " + k + " value: " + v));
-        System.out.println("********* run workers ***********");
     }
 }

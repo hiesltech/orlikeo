@@ -23,7 +23,7 @@
 <!-- jQuery -->
 <%--<script src="<c:url value="/resources/mytheme/bootstrap/js/jquery.js" />" ></script>--%>
 <!-- jQuery -->
-<script src="<c:url value="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" />"> </script>
+<script src="<c:url value="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" />"> </script>
 <!-- Bootstrap Core JavaScript -->
 <script src="<c:url value="/resources/mytheme/bootstrap/js/bootstrap.js" />" ></script>
 <%--<script src="<c:url value="/resources/mytheme/bootstrap/js/bootstrap-table.min.js" />" ></script>--%>

@@ -1,9 +1,6 @@
 package umk.zychu.inzynierka.controller;
 
 
-import java.security.Principal;
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -11,11 +8,14 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-
 import umk.zychu.inzynierka.model.Friendship;
 import umk.zychu.inzynierka.model.User;
 import umk.zychu.inzynierka.service.FriendshipService;
+import umk.zychu.inzynierka.service.UserNotificationsService;
 import umk.zychu.inzynierka.service.UserService;
+
+import java.security.Principal;
+import java.util.List;
 
 
 @Controller
@@ -26,6 +26,8 @@ public class FriendsController {
 	FriendshipService friendshipService;
 	@Autowired
 	UserService userService;
+	@Autowired
+	UserNotificationsService userNotificationsService;
 	
 	@RequestMapping(method = RequestMethod.GET)
 	public String getFriends(ModelMap model) {
@@ -133,6 +135,7 @@ public class FriendsController {
 		if(allowToSeeProfile){
 			model.addAttribute("user", userRequest);
 		}
+		userNotificationsService.deleteAllWithFriend(userRequest);
 		return "profile";
 	}
 

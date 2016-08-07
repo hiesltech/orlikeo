@@ -52,19 +52,20 @@ public class EventServiceImp implements EventService {
 		Graphic graphic = event.getGraphic();
 		Orlik orlik = graphic.getOrlik();
 		User user = userService.getUser(SecurityContextHolder.getContext().getAuthentication().getName());
-		if(orlik.getOrlikManagers().contains(user)){
-			changeConcurentEvents(event);
-			EventState readyToAccept = eventStateService.findOne(EventState.READY_TO_ACCEPT);
-			if(event.getState().equals(readyToAccept)){
-				eventToApproveService.removeEventFromWaitingForCheckByManager(event);
-				EventState approved = eventStateService.findOne(EventState.APPROVED);
-				event.setState(approved);
-				eventDAO.save(event);
-			}
+		EventState readyToAccept = eventStateService.findOne(EventState.READY_TO_ACCEPT);
+		if(orlik.getAnimator() !=  null && orlik.getAnimator().equals(user) && event.getState().equals(readyToAccept)) {
+			changeConcurrentEvents(event);
+			eventToApproveService.removeEventFromWaitingForCheckByManager(event);
+			EventState approved = eventStateService.findOne(EventState.APPROVED);
+			event.setState(approved);
+			save(event);
+			userNotificationsService.eventWonRaceForGraphic(event);
 		}
 	}
 
-	private void changeConcurentEvents(Event event) {
+
+	@Override
+	public void changeConcurrentEvents(Event event) {
 		UserDecision invited = userEventDecisionService.findOne(UserDecision.INVITED);
 		UserDecision accepted = userEventDecisionService.findOne(UserDecision.ACCEPTED);
 		UserDecision rejected = userEventDecisionService.findOne(UserDecision.REJECTED);
@@ -75,6 +76,7 @@ public class EventServiceImp implements EventService {
 		List<Event> events = graphic.getEvents().stream()
 				.filter(e -> !e.equals(event))
 				.collect(Collectors.toList());
+		userNotificationsService.eventsLostRaceForGraphic(events);
 		if (!events.isEmpty()) {
 			for (Event e : events) {
 				e.getUsersEvent()
@@ -90,24 +92,11 @@ public class EventServiceImp implements EventService {
 					eventToApproveService.removeEventFromWaitingForCheckByManager(e);
 				}
 				e.setState(inBasket);
-				eventDAO.save(e);
+				save(e);
 			}
 		}
 	}
 
-	@Override
-	public void deleteEventById(Integer id) throws IllegalArgumentException{
-		if(eventDAO.exists(id)){
-			Event event = eventDAO.findOne(id);
-			EventState readyToAccept = eventStateService.findOne(EventState.READY_TO_ACCEPT);
-			if(event.getState().equals(readyToAccept)){
-				eventToApproveService.removeEventFromWaitingForCheckByManager(event);
-			}
-			event.getUsersEvent().forEach(ue -> userEventService.delete(ue));
-			eventDAO.delete(event);
-		}
-	}
-	
 	@Override
 	public List<Event> findAll() {
 		return eventDAO.findAll();
@@ -500,7 +489,7 @@ public class EventServiceImp implements EventService {
 			UserEvent organizerUserEvent = new UserEvent(userOrganizer, organizerRole, organizerDecision, true, event, null);
 			List<UserEvent> usersEvents = new LinkedList<UserEvent>();
 			usersEvents.add(organizerUserEvent);
-			ArrayList<RegisterEventUser> regUsersList = (ArrayList<RegisterEventUser>)form.getEventFormMembers();
+			ArrayList<RegisterEventUser> regUsersList = form.getEventFormMembers() != null ? (ArrayList<RegisterEventUser>)form.getEventFormMembers() : new ArrayList<>();
 			for (RegisterEventUser regEventUser : regUsersList) {
 				if (regEventUser.getAllowed() || regEventUser.getInvited()) {
 					User userTarget = userService.getUser(regEventUser.getEmail());
@@ -515,11 +504,8 @@ public class EventServiceImp implements EventService {
 				}
 			}
 			event.setUsersEvent(usersEvents);
-			event = eventDAO.save(event);
-			event.getUsersEvent().forEach(ue ->{
-				UserNotification userNotification = new UserNotification(ue);
-				userNotificationsService.save(userNotification);
-			});
+			event = save(event);
+			userNotificationsService.eventCreated(event);
 			return event;
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -529,7 +515,7 @@ public class EventServiceImp implements EventService {
 
 	@Override
 	public Event save(Event event){
-			return eventDAO.saveAndFlush(event);
+		return eventDAO.saveAndFlush(event);
 	}
 
 	@Override
@@ -539,7 +525,7 @@ public class EventServiceImp implements EventService {
 		// remove userOrganizer && editing user
 		form.getEventFormMembers()
 			.removeIf(reu -> reu.getEmail().equals(event.getUserOrganizer().getEmail()) || reu.getEmail().equals(user.getEmail())); 
-		// remove all who's !invited && has !rights && their && !has userEvent
+		// remove all who's !invited && has !rights &&  !have userEvent
 		form.getEventFormMembers()
 			.removeIf(reu -> !reu.getAllowed() 
 						&& !reu.getInvited() 
@@ -551,18 +537,37 @@ public class EventServiceImp implements EventService {
 							&& !userEventService.findOne(event, userService.getUser(reu.getEmail())).get().getInviter().equals(user));
 		}else{
 			event.setPlayersLimit(form.getUsersLimit());
-			eventDAO.save(event);
+			save(event);
 		}
 		updateUsersEvents(form.getEventFormMembers(), event);
 		userEventService.changeEventStateIfRequired(event);
-		
+		//TODO powiadomienia o dokonanych zmianach wobec zaproszonych/usuniętych itd.
 	}
 
 	@Override
 	public void delete(Event e) {
-		e.getUsersEvent().stream()
-				.forEach(ue -> userEventService.delete(ue));
-		eventDAO.delete(e);
+		delete(e.getId());
+	}
+
+	@Override
+	public Event findOne(Integer id) {
+		return eventDAO.findOne(id);
+	}
+
+	@Override
+	public void delete(Integer id) throws IllegalArgumentException{
+		if(eventDAO.exists(id)){
+			Event event = eventDAO.findOne(id);
+			EventState readyToAccept = eventStateService.findOne(EventState.READY_TO_ACCEPT);
+			if(event.getState().equals(readyToAccept)){
+				eventToApproveService.removeEventFromWaitingForCheckByManager(event);
+			}
+			userNotificationsService.deleteAllOnEvent(event);
+			userNotificationsService.eventIsRemovedByOrganizer(event);
+			event.getUsersEvent().stream()
+					.forEach(ue -> userEventService.delete(ue));
+			eventDAO.delete(event);
+		}
 	}
 
 	private void updateUsersEvents(List<RegisterEventUser> eventFormMembers, Event event) {
@@ -635,7 +640,7 @@ public class EventServiceImp implements EventService {
 							if (ueOpt.isPresent()) {
 								UserEvent ue = ueOpt.get();
 								event.getUsersEvent().remove(ue);
-								eventDAO.save(event);
+								save(event);
 							}
 						});
 		Event ev = eventDAO.findOne(event.getId());	

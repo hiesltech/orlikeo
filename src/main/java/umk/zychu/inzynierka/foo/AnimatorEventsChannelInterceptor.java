@@ -28,7 +28,7 @@ import java.util.concurrent.ScheduledFuture;
 public class AnimatorEventsChannelInterceptor extends ChannelInterceptorAdapter {
 
     private static final Logger LOGGER = LoggerFactory
-            .getLogger(PresenceChannelInterceptor.class);
+            .getLogger(AnimatorChannelInterceptor.class);
 
     @Autowired
     private SimpMessagingTemplate template;

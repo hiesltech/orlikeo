@@ -9,7 +9,7 @@
         $('#forAcceptationTable').dataTable(
                 {
                     "language": {
-                        "url": "//cdn.datatables.net/plug-ins/1.10.9/i18n/Polish.json"
+                        "url": "https://cdn.datatables.net/plug-ins/1.10.9/i18n/Polish.json"
                     },
                     "bFilter": false
                 });
@@ -18,7 +18,7 @@
         $('#treathenedTable').dataTable(
                 {
                     "language": {
-                        "url": "//cdn.datatables.net/plug-ins/1.10.9/i18n/Polish.json"
+                        "url": "https://cdn.datatables.net/plug-ins/1.10.9/i18n/Polish.json"
                     },
                     "bFilter": false
                 });
@@ -27,7 +27,7 @@
         $('#acceptedTable').dataTable(
                 {
                     "language": {
-                        "url": "//cdn.datatables.net/plug-ins/1.10.9/i18n/Polish.json"
+                        "url": "https://cdn.datatables.net/plug-ins/1.10.9/i18n/Polish.json"
                     },
                     "bFilter": false
                 });
@@ -36,7 +36,7 @@
         $('#underConstructionTable').dataTable(
                 {
                     "language": {
-                        "url": "//cdn.datatables.net/plug-ins/1.10.9/i18n/Polish.json"
+                        "url": "https://cdn.datatables.net/plug-ins/1.10.9/i18n/Polish.json"
                     },
                     "bFilter": false
                 });

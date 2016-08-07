@@ -1,22 +1,16 @@
 package umk.zychu.inzynierka.service;
 
-import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import umk.zychu.inzynierka.model.Event;
-import umk.zychu.inzynierka.model.EventState;
-import umk.zychu.inzynierka.model.EventToApprove;
-import umk.zychu.inzynierka.model.User;
-import umk.zychu.inzynierka.model.UserDecision;
-import umk.zychu.inzynierka.model.UserEvent;
+import umk.zychu.inzynierka.model.*;
 import umk.zychu.inzynierka.repository.UserEventDaoRepository;
+
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class UserEventServiceImp implements UserEventService {
@@ -31,6 +25,8 @@ public class UserEventServiceImp implements UserEventService {
 	UserService userService;
 	@Autowired
 	UserEventDecisionService userEventDecisionService;
+	@Autowired
+	UserNotificationsService userNotificationsService;
 	
 	@Autowired
 	EventToApproveService eventToApproveService;
@@ -61,6 +57,7 @@ public class UserEventServiceImp implements UserEventService {
 		EventState approved = eventStateService.findOne(EventState.APPROVED);
 		EventState threatened = eventStateService.findOne(EventState.THREATENED);
 		UserDecision accepted = userEventDecisionService.findOne(UserDecision.ACCEPTED);
+		EventState beforeState = event.getState();
 		long counter = event.getUsersEvent().stream()
 				.filter(ue -> ue.getDecision().equals(accepted))
 				.count();
@@ -79,6 +76,9 @@ public class UserEventServiceImp implements UserEventService {
 			//TODO set time to find player, if not change state to IN_PROGRESS
 		}else if (event.getState().equals(threatened) && counter >= changeStatusBarrier){
 			event.setState(approved);
+		}
+		if(!beforeState.equals(event.getState())){
+			userNotificationsService.eventStateChanged(event);
 		}
 		eventService.save(event);
 	}

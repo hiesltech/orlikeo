@@ -29,6 +29,17 @@ public class AllServices{
     @Autowired
     private EventStateService eventStateService;
 
+	public UserNotificationsService getUserNotificationsService() {
+		return userNotificationsService;
+	}
+
+	public void setUserNotificationsService(UserNotificationsService userNotificationsService) {
+		this.userNotificationsService = userNotificationsService;
+	}
+
+	@Autowired
+	private UserNotificationsService userNotificationsService;
+
     public EventStateService getEventStateService(){
         return eventStateService;
     }

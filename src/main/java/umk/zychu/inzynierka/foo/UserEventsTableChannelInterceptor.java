@@ -101,9 +101,9 @@ public class UserEventsTableChannelInterceptor extends ChannelInterceptorAdapter
         switch (sha.getCommand()) {
 		case CONNECT:
 			LOGGER.debug("MY STOMP Connect [sessionId: " + sessionId + "]");
-                if (sha.containsNativeHeader("page"))
+                if (sha.toNativeHeaderMap().containsKey("page"))
                     showSessionsPageHeader.put(sha.getSessionId(), sha.getFirstNativeHeader("page"));
-                if (sha.containsNativeHeader("state"))
+                if (sha.toNativeHeaderMap().containsKey("state"))
                     showSessionsStateHeader.put(sha.getSessionId(), sha.getFirstNativeHeader("state"));
             break;
 		case SUBSCRIBE:
@@ -135,7 +135,7 @@ public class UserEventsTableChannelInterceptor extends ChannelInterceptorAdapter
 			System.out.println("MY CANT TAKE AN ACTION");
 			break;
 		}
-        debug(sha);
+        //debug(sha);
         System.out.println();
     }
 

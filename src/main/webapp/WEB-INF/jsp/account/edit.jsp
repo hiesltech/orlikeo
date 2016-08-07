@@ -10,7 +10,7 @@
 
 <c:url value="/account/edit" var="editAccountUrl" />
 
-
+<!-- TODO: potwierdzenie dokonanych zmian -->
 <div class="container">
 <div class="row" style="padding: 50px 0px">
 	<div class="col-sm-6 col-md-4 col-md-offset-4 vcenter"><h1 class="text-center login-title">Aktualizacja profilu</h1>
@@ -27,7 +27,7 @@
 					<spring:message code="web.account.edit.name.placeholder" var="namePlaceholder"/>
 					<form:input  path="name" pattern="[a-zęóąśłżźń A-ZŚŁĆŹŻ]{2,45}" type="text" class="form-control"  placeholder="${ namePlaceholder }"  />
 				</div>
-				
+
 				<!-- surname -->
                 <div class="form-group">
 					<form:label path="surname"><spring:message code="web.account.edit.surname.label"/></form:label>
@@ -42,7 +42,7 @@
 					<br/>	
 					<form:errors path="dateOfBirth" cssClass="error" />
 					<spring:message code="web.account.edit.birthdate.placeholder" var="birthdatePlaceholder"/>
-					<form:input  path="dateOfBirth"  pattern="(0[1-9]|[12][0-9]|3[01])[.](0[1-9]|1[012])[.](19|20|)\d\d" type="text" class="form-control"  placeholder="${ birthdatePlaceholder }"/>
+					<form:input  path="dateOfBirth"  pattern="((0[1-9])|(1[0-9])|(2[0-9])|(3[0-1]))[.]((0[1-9])|(1[0-2]))[.](\d{4})" required="required" type="text" class="form-control"  placeholder="${ birthdatePlaceholder }"/>
 				</div>
         		
         		<!-- position -->

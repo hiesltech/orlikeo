@@ -75,8 +75,8 @@ public class GraphicController {
 		}
 		model.addObject("list", json);
 		model.addObject("orlikInfo", orlik);
-		List<User> managers = orlikService.getOrlikManagersByOrlik(orlik);
-		model.addObject("managers", managers);
+		User animator = orlik.getAnimator();
+		model.addObject("animator", animator);
 		if(eventId != null)
 			model.addObject("evId", eventId);
 		return model;

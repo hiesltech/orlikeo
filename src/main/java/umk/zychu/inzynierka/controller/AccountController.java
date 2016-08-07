@@ -5,11 +5,15 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.InitBinder;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import umk.zychu.inzynierka.controller.DTObeans.ChangePasswordForm;
 import umk.zychu.inzynierka.controller.DTObeans.EditAccountForm;
 import umk.zychu.inzynierka.controller.validator.ChangingPasswordFormValidator;
@@ -58,8 +62,7 @@ public class AccountController {
 		}
 		else{
 			userService.changePassword(form);
-			String email = principal.getName();
-			return "redirect:/account/profile/" + email;
+			return "redirect:/account/profile/";
 		}
 	}
 	
@@ -69,8 +72,8 @@ public class AccountController {
 			return "editAccount";
 		}else{
 			userService.updateUserDetails(form);
-			String email = principal.getName();
-			return "redirect:/account/profile/" + email;
+			String redirect = "redirect:/account/profile/";
+			return redirect;
 		}
 	}
 
@@ -94,7 +97,7 @@ public class AccountController {
 	public String userPassword(Locale locale, Map<String, Object> model) {
 		ChangePasswordForm form = new ChangePasswordForm();
 		model.put("changePasswordForm", form);
-		return "password";
+        return "password";
 	}
 	
 	@RequestMapping(value = "/profile", method = RequestMethod.GET)
@@ -103,5 +106,12 @@ public class AccountController {
 		model.addAttribute("user", user);
 		model.addAttribute("self", true);
 		return "profile";
+	}
+
+	@PreAuthorize(value = "hasRole(ROLE_USER)")
+	@RequestMapping(value = "/remove", method = RequestMethod.POST)
+	public String removeAccount(){
+		userService.removeAccount();
+		return "redirect:/j_spring_security_logout";
 	}
 }

@@ -9,7 +9,7 @@
         $('#friendsTable').dataTable(
                 {
                     "language": {
-                        "url": "//cdn.datatables.net/plug-ins/1.10.9/i18n/Polish.json"
+                        "url": "https://cdn.datatables.net/plug-ins/1.10.9/i18n/Polish.json"
                     }
                 });
     } );
@@ -17,7 +17,7 @@
         $('#invitationsReceiveTable').dataTable(
                 {
                     "language": {
-                        "url": "//cdn.datatables.net/plug-ins/1.10.9/i18n/Polish.json"
+                        "url": "https://cdn.datatables.net/plug-ins/1.10.9/i18n/Polish.json"
                     }
                 });
     } );
@@ -25,7 +25,7 @@
         $('#invitationsRequestsTable').dataTable(
                 {
                     "language": {
-                        "url": "//cdn.datatables.net/plug-ins/1.10.9/i18n/Polish.json"
+                        "url": "https://cdn.datatables.net/plug-ins/1.10.9/i18n/Polish.json"
                     }
                 });
     } );
@@ -33,7 +33,7 @@
         $('#blockedTable').dataTable(
                 {
                     "language": {
-                        "url": "//cdn.datatables.net/plug-ins/1.10.9/i18n/Polish.json"
+                        "url": "https://cdn.datatables.net/plug-ins/1.10.9/i18n/Polish.json"
                     }
                 });
     } );

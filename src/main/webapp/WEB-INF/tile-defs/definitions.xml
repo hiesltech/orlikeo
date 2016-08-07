@@ -29,6 +29,7 @@
         <put-list-attribute name="scripts">
             <add-attribute value="/WEB-INF/jsp/scripts/allPagesRequired.jsp" />
             <add-attribute  value="/WEB-INF/jsp/scripts/stompNotifications.jsp" />
+			<add-attribute  value="/WEB-INF/jsp/scripts/stompUserNotifications.jsp" />
         </put-list-attribute>
         <put-list-attribute name="extensibleStyles">
         </put-list-attribute>
@@ -65,6 +66,9 @@
         <put-attribute name="title" value=" - Profil"/>
 		<put-attribute name="content" value="/WEB-INF/jsp/account/profile.jsp" />
         <put-attribute name="modal" value="/WEB-INF/jsp/scripts/friendActionButtonsModal.jsp" />
+		<put-list-attribute name="extensibleScripts">
+			<add-attribute  value="/WEB-INF/jsp/scripts/removeAccountConfirmModal.jsp" />
+		</put-list-attribute>
 	</definition>
 	
 	
@@ -90,14 +94,17 @@
 	<definition name="eventEdit" extends="defaultTemplate">
         <put-attribute name="title" value=" - Edycja wydarzenia"/>
 		<put-attribute name="content" value="/WEB-INF/jsp/event/edit.jsp" />
-		<put-attribute name="modal" value="/WEB-INF/jsp/event/removeEventConfirmModal.jsp" />
+		<put-attribute name="modal" value="/WEB-INF/jsp/scripts/saveConfirmModal.jsp" />
+		<put-list-attribute name="extensibleScripts">
+			<add-attribute  value="/WEB-INF/jsp/scripts/removeEventConfirmModal.jsp" />
+		</put-list-attribute>
 	</definition>
 	<!-- organized -->
 	<definition name="eventsInState" extends="defaultTemplate">
         <put-attribute name="title" value=" - Wydarzenia"/>
 		<put-attribute name="eventsMainWindow" value="/WEB-INF/jsp/template/eventStatesMainWindow.jsp" />
 		<put-attribute name="content" value="/WEB-INF/jsp/event/organized.jsp" />
-		<put-attribute name="modal" value="/WEB-INF/jsp/event/removeEventConfirmModal.jsp" />
+		<put-attribute name="modal" value="/WEB-INF/jsp/scripts/removeEventConfirmModal.jsp" />
         <put-list-attribute name="extensibleStyles">
             <add-attribute value="/WEB-INF/jsp/styles/dataTablesCSS.jsp" />
         </put-list-attribute>
@@ -150,11 +157,31 @@
         </put-list-attribute>
 	</definition>
 
+	<!-- NOTIFICATIONS -->
+	<definition name="notifications" extends="defaultTemplate">
+		<put-attribute name="title" value=" - Powiadomienia"/>
+		<put-attribute name="content" value="/WEB-INF/jsp/userNotifications/notifications.jsp" />
+	</definition>
 	
 	
 	<!-- PLANNER -->
 	<definition name="javaplanner"  template="/WEB-INF/jsp/planner/javaplanner.jsp" >
 	</definition>
+    <definition name="javaplanner2"  template="/WEB-INF/jsp/planner/javaplanner2.jsp" >
+        <put-attribute name="navbar" value="/WEB-INF/jsp/template/navbar.jsp" />
+        <put-attribute name="footer" value="/WEB-INF/jsp/template/footer.jsp" />
+        <put-list-attribute name="styles">
+            <add-attribute value="/WEB-INF/jsp/styles/bootstrapCSS.jsp" />
+        </put-list-attribute>
+        <put-list-attribute name="scripts">
+            <add-attribute value="/WEB-INF/jsp/scripts/allPagesRequired.jsp" />
+            <add-attribute  value="/WEB-INF/jsp/scripts/stompNotifications.jsp" />
+        </put-list-attribute>
+        <put-list-attribute name="extensibleStyles">
+        </put-list-attribute>
+        <put-list-attribute name="extensibleScripts">
+        </put-list-attribute>
+    </definition>
 	<definition name="animatorPane" extends="defaultTemplate">
         <put-attribute name="title" value=" - Panel zatwierdzania"/>
 		<put-attribute name="content" value="/WEB-INF/jsp/planner/animatorPane.jsp" />
@@ -165,6 +192,9 @@
             <add-attribute  value="/WEB-INF/jsp/scripts/stompAnimatorEvents.jsp" />
         </put-list-attribute>
 	</definition>
+
+
+
 
 
 	<!-- HOME&HELP -->
@@ -186,7 +216,23 @@
 	<definition name="error" template="/WEB-INF/jsp/errors/error404.jsp">
 	</definition>
 
-
+	<!-- ADMIN -->
+	<definition name="orliks" extends="defaultTemplate">
+		<put-attribute name="title" value=" - Admin"/>
+		<put-attribute name="content" value="/WEB-INF/jsp/admin/orliks.jsp" />
+		<put-list-attribute name="extensibleScripts">
+			<add-attribute value="/WEB-INF/jsp/scripts/adminOrliksTable.jsp" />
+			<add-attribute value="/WEB-INF/jsp/scripts/removeOrlikConfirmModal.jsp" />
+		</put-list-attribute>
+	</definition>
+	<definition name="orlikEdit" extends="defaultTemplate">
+		<put-attribute name="title" value=" - Admin"/>
+		<put-attribute name="content" value="/WEB-INF/jsp/admin/orlikEdit.jsp" />
+		<put-attribute name="modal" value="/WEB-INF/jsp/scripts/saveConfirmModal.jsp" />
+		<put-list-attribute name="extensibleStyles">
+			<add-attribute value="/WEB-INF/jsp/styles/accountEditAndRegisterCSS.jsp" />
+		</put-list-attribute>
+	</definition>
 </tiles-definitions>
 
 

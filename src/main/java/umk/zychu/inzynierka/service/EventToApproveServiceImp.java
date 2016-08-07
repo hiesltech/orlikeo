@@ -1,22 +1,15 @@
 package umk.zychu.inzynierka.service;
 
-import java.util.List;
-import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
-
-
-
-
-
-
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
-
 import umk.zychu.inzynierka.model.Event;
 import umk.zychu.inzynierka.model.EventToApprove;
 import umk.zychu.inzynierka.model.User;
 import umk.zychu.inzynierka.repository.EventToApproveDaoRepository;
+
+import java.util.List;
+import java.util.Optional;
 
 @Service
 public class EventToApproveServiceImp implements EventToApproveService {
@@ -72,7 +65,9 @@ public class EventToApproveServiceImp implements EventToApproveService {
 				.findAll()
 				.stream()
 				.filter(eta -> eta.getEvent().getGraphic().getOrlik()
-						.getOrlikManagers().contains(manager)
+						.getAnimator() != null
+						&& eta.getEvent().getGraphic().getOrlik()
+						.getAnimator().equals(manager)
 						&& !eta.isChecked())
 				.forEach(eta -> {
 					eta.setChecked(true);

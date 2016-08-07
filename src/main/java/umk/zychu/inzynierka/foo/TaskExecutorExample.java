@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.task.TaskExecutor;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 import umk.zychu.inzynierka.model.EventState;
 import umk.zychu.inzynierka.model.UserDecision;
 import umk.zychu.inzynierka.model.UserEventRole;
@@ -32,15 +33,15 @@ public class TaskExecutorExample {
 
 
 	@Autowired
-	GraphicService graphicService;
+    GraphicService graphicService;
 	@Autowired
-	EventStateService eventStateService;
+    EventStateService eventStateService;
 	@Autowired
-	EventService eventService;
+    EventService eventService;
 	@Autowired
-	UserEventRoleService userEventRoleService;
+    UserEventRoleService userEventRoleService;
 	@Autowired
-	UserEventDecisionService userEventDecisionService;
+    UserEventDecisionService userEventDecisionService;
 	@Autowired
 	UserEventService userEventService;
 	@Autowired
@@ -56,6 +57,8 @@ public class TaskExecutorExample {
 		super();
 		this.taskExecutor = taskExecutor;
 	}
+
+
 
 	@PostConstruct
 	private void post(){
@@ -84,15 +87,15 @@ public class TaskExecutorExample {
 			}
 		});
 	}
-
+	@Transactional
 	private void clearGraphics() {
 		graphicService.findAll().stream()
 				.filter(g -> fromNow - g.getEndTime().getTime() > halfAnHour + quarterOfAnHour)
 				.forEach(g -> graphicService.delete(g));
 	}
 
+	@Transactional
 	private void setGraphicAvailableForAllIfNotReserved() {
-
 		if(graphicService.findAll().stream()
 				.filter(g -> g.getAvailable() && g.getStartTime().getTime() - fromNow < quarterOfAnHour)
 				.flatMap(g -> g.getEvents().stream())
@@ -107,16 +110,16 @@ public class TaskExecutorExample {
 		}
 
 	}
-
+	@Transactional
 	private void removeAllEventsOutOfTerm() {
 		graphicService.findAll().stream()
 				.filter(g -> fromNow - g.getEndTime().getTime() > halfAnHour)
 				.flatMap(g -> g.getEvents().stream())
 				.forEach(e -> eventService.delete(e));
 	}
-
+	@Transactional
 	private void removeAllInBuildState(){
-        System.out.println("WORK TO DO");
+        /*System.out.println("WORK TO DO");*/
 		//reduce invitations
 		graphicService.findAll().stream()
 				.filter(g -> g.getStartTime().getTime() - fromNow < halfAnHour)
@@ -145,7 +148,7 @@ public class TaskExecutorExample {
 				.forEach(g -> g.setAvailable(false));
 
 	}
-
+	@Transactional
 	private void removeAllThreatenedAndToApprove() {
 		graphicService.findAll().stream()
 				.filter(g -> g.getStartTime().getTime() - fromNow < quarterOfAnHour)
