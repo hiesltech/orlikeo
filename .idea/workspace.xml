@@ -1,436 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f6e8f323-861f-4b0a-9258-5bfbe158578a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jbossews.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/AdminController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/DTObeans/OrlikForm.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/DTObeans/UserNotificationDTO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/UserNotificationsController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/validator/OrlikFormValidator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/filter/CharacterEncodingFilter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/foo/UserNotificationsChannelInterceptor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/model/UserAdmin.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/repository/UserAdminDaoRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/service/UserAdminService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/service/UserAdminServiceImp.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/applicationContext.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/logging.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/mvc-dispatcher-servlet.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/spring/aop-context.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/spring/datasource-config.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/spring/spring-security.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin/orlikEdit.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin/orliks.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/planner/javaplanner2.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/planner/plannerScript.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/scripts/adminOrliksTable.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/scripts/removeAccountConfirmModal.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/scripts/removeOrlikConfirmModal.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/scripts/saveConfirmModal.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/scripts/stompUserNotifications.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/userNotifications/notifications.jsp" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/datasource-config.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/root-context.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/spring-security.xml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/foo/NotificationsChannelInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/foo/AnimatorNotificationsChannelInterceptor.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/foo/PresenceChannelInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/foo/AnimatorChannelInterceptor.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/appServlet/websocket-context.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/spring/websocket-context.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/rabbit-context.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/spring/rabbit-context.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/tiles-context.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/spring/tiles-context.xml" />
+    <list default="true" id="f6e8f323-861f-4b0a-9258-5bfbe158578a" name="Default" comment="WTF-1.0">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.openshift/README.md" afterPath="$PROJECT_DIR$/.openshift/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.openshift/action_hooks/README.md" afterPath="$PROJECT_DIR$/.openshift/action_hooks/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.openshift/config/catalina.policy" afterPath="$PROJECT_DIR$/.openshift/config/catalina.policy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.openshift/config/catalina.properties" afterPath="$PROJECT_DIR$/.openshift/config/catalina.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.openshift/config/context.xml" afterPath="$PROJECT_DIR$/.openshift/config/context.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.openshift/config/logging.properties" afterPath="$PROJECT_DIR$/.openshift/config/logging.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.openshift/config/postgresql_module.xml" afterPath="$PROJECT_DIR$/.openshift/config/postgresql_module.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.openshift/config/server.xml" afterPath="$PROJECT_DIR$/.openshift/config/server.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.openshift/config/settings.base.xml" afterPath="$PROJECT_DIR$/.openshift/config/settings.base.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.openshift/config/settings.prod.xml" afterPath="$PROJECT_DIR$/.openshift/config/settings.prod.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.openshift/config/settings.rhcloud.xml" afterPath="$PROJECT_DIR$/.openshift/config/settings.rhcloud.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.openshift/config/settings.stg.xml" afterPath="$PROJECT_DIR$/.openshift/config/settings.stg.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.openshift/config/tomcat-users.xml" afterPath="$PROJECT_DIR$/.openshift/config/tomcat-users.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.openshift/config/web.xml" afterPath="$PROJECT_DIR$/.openshift/config/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.openshift/cron/README.cron" afterPath="$PROJECT_DIR$/.openshift/cron/README.cron" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.openshift/cron/weekly/README" afterPath="$PROJECT_DIR$/.openshift/cron/weekly/README" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.openshift/cron/weekly/chrono.dat" afterPath="$PROJECT_DIR$/.openshift/cron/weekly/chrono.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.openshift/cron/weekly/chronograph" afterPath="$PROJECT_DIR$/.openshift/cron/weekly/chronograph" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.openshift/cron/weekly/jobs.allow" afterPath="$PROJECT_DIR$/.openshift/cron/weekly/jobs.allow" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.openshift/cron/weekly/jobs.deny" afterPath="$PROJECT_DIR$/.openshift/cron/weekly/jobs.deny" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.openshift/markers/README.md" afterPath="$PROJECT_DIR$/.openshift/markers/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.settings/.jsdtscope" afterPath="$PROJECT_DIR$/.settings/.jsdtscope" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.springBeans" afterPath="$PROJECT_DIR$/.springBeans" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/AccountController.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/AccountController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/DTObeans/AcceptEventForm.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/DTObeans/AcceptEventForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/DTObeans/ChangePasswordForm.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/DTObeans/ChangePasswordForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/DTObeans/ChoosenOrlikBean.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/DTObeans/ChoosenOrlikBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/DTObeans/DHXCustomEvent.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/DTObeans/DHXCustomEvent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/DTObeans/EditAccountForm.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/DTObeans/EditAccountForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/DTObeans/EventWindowBlock.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/DTObeans/EventWindowBlock.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/DTObeans/Greeting.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/DTObeans/Greeting.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/DTObeans/HelloMessage.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/DTObeans/HelloMessage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/DTObeans/JsonEventObject.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/DTObeans/JsonEventObject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/DTObeans/JsonTestObject.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/DTObeans/JsonTestObject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/DTObeans/RegisterEventForm.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/DTObeans/RegisterEventForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/DTObeans/RegisterEventUser.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/DTObeans/RegisterEventUser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/DTObeans/RegisterUserBean.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/DTObeans/RegisterUserBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/DTObeans/UserGameDetails.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/DTObeans/UserGameDetails.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/EventsController.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/EventsController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/FriendsController.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/FriendsController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/GraphicController.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/GraphicController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/HelpController.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/HelpController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/HomeController.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/HomeController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/JavaplannerController.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/JavaplannerController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/LoginController.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/LoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/RegisterController.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/RegisterController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/RestfulController.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/RestfulController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/Websocket2Controller.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/Websocket2Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/WebsocketController.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/WebsocketController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/WebsocketGreetingsController.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/WebsocketGreetingsController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/util/AllServices.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/util/AllServices.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/util/EventType.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/util/EventType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/util/EventsManager.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/util/EventsManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/validator/ChangingPasswordFormValidator.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/validator/ChangingPasswordFormValidator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/validator/ChoosenOrlikBeanValidator.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/validator/ChoosenOrlikBeanValidator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/validator/EditAccountFormValidator.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/validator/EditAccountFormValidator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/validator/RegisterUserBeanValidator.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/controller/validator/RegisterUserBeanValidator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/foo/AnimatorEventsChannelInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/foo/AnimatorEventsChannelInterceptor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/foo/TaskExecutorExample.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/foo/TaskExecutorExample.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/foo/UserEventsTableChannelInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/foo/UserEventsTableChannelInterceptor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/foo/WindowsBlocksChannelInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/foo/WindowsBlocksChannelInterceptor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/model/BaseEntity.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/model/BaseEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/model/Event.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/model/Event.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/model/EventState.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/model/EventState.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/model/EventToApprove.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/model/EventToApprove.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/model/Friendship.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/model/Friendship.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/model/Graphic.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/model/Graphic.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/model/Orlik.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/model/Orlik.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/model/User.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/model/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/model/UserDecision.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/model/UserDecision.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/model/UserEvent.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/model/UserEvent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/model/UserEventRole.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/model/UserEventRole.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/model/UserNotification.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/model/UserNotification.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/repository/BaseRepository.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/repository/BaseRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/repository/EventDaoRepository.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/repository/EventDaoRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/repository/EventStateDaoRepository.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/repository/EventStateDaoRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/repository/EventToApproveDaoRepository.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/repository/EventToApproveDaoRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/repository/FriendshipDaoRepository.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/repository/FriendshipDaoRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/repository/GraphicDaoRepository.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/repository/GraphicDaoRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/repository/OrlikDaoRepository.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/repository/OrlikDaoRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/repository/UserDaoRepository.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/repository/UserDaoRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/repository/UserEventDaoRepository.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/repository/UserEventDaoRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/repository/UserEventDecisionDAOrepository.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/repository/UserEventDecisionDAOrepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/repository/UserEventRoleDAOrepository.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/repository/UserEventRoleDAOrepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/repository/UserNotificationsDaoRepository.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/repository/UserNotificationsDaoRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/security/CustomUserDetails.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/security/CustomUserDetails.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/security/Roles.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/security/Roles.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/security/myUserDetailsServiceImp.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/security/myUserDetailsServiceImp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/service/EventService.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/service/EventService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/service/EventServiceImp.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/service/EventServiceImp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/service/EventStateService.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/service/EventStateService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/service/EventStateServiceImp.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/service/EventStateServiceImp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/service/EventToApproveService.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/service/EventToApproveService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/service/EventToApproveServiceImp.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/service/EventToApproveServiceImp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/service/FriendshipService.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/service/FriendshipService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/service/FriendshipServiceImp.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/service/FriendshipServiceImp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/service/GraphicService.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/service/GraphicService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/service/GraphicServiceImp.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/service/GraphicServiceImp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/service/OrlikService.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/service/OrlikService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/service/OrlikServiceImp.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/service/OrlikServiceImp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/service/UserEventDecisionImp.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/service/UserEventDecisionImp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/service/UserEventDecisionService.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/service/UserEventDecisionService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/service/UserEventRoleService.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/service/UserEventRoleService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/service/UserEventRoleServiceImp.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/service/UserEventRoleServiceImp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/service/UserEventService.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/service/UserEventService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/service/UserEventServiceImp.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/service/UserEventServiceImp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/service/UserNotificationsService.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/service/UserNotificationsService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/service/UserNotificationsServiceImp.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/service/UserNotificationsServiceImp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/service/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/service/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/umk/zychu/inzynierka/service/UserServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/log4j.properties" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/log4j.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/log4j.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/log4j.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/account/edit.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/account/edit.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/account/login.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/account/login.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/account/password.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/account/password.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/account/profile.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/account/profile.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/account/register.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/account/register.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/errors/error404.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/errors/error404.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/event/create.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/event/create.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/event/created.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/event/created.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/event/details.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/event/details.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/event/edit.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/event/edit.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/event/events.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/event/events.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/event/organized.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/event/organized.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/event/removeEventConfirmModal.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/event/removeEventConfirmModal.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/friend/friends.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/friend/friends.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/friend/search.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/friend/search.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/graphic/graphic.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/graphic/graphic.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/graphic/reserve.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/graphic/reserve.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/planner/animatorPane.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/planner/animatorPane.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/planner/javaplanner.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/planner/javaplanner.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/scripts/allPagesRequired.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/scripts/allPagesRequired.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/scripts/eventDetailsTables.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/scripts/eventDetailsTables.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/scripts/eventReserveTable.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/scripts/eventReserveTable.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/scripts/friendActionButtonsModal.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/scripts/friendActionButtonsModal.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/scripts/friendFoundedTable.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/scripts/friendFoundedTable.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/scripts/friendsTables.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/scripts/friendsTables.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/scripts/saveEventsuccessModal.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/scripts/saveEventsuccessModal.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/scripts/stompAnimatorEvents.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/scripts/stompAnimatorEvents.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/scripts/stompNotifications.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/scripts/stompNotifications.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/scripts/stompUserBlocksWindowsAndDetailsTable.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/scripts/stompUserBlocksWindowsAndDetailsTable.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/scripts/stompUserWindowBlocks.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/scripts/stompUserWindowBlocks.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/stock.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/stock.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/styles/accountEditAndRegisterCSS.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/styles/accountEditAndRegisterCSS.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/styles/bootstrapCSS.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/styles/bootstrapCSS.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/styles/calendarCSS.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/styles/calendarCSS.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/styles/dataTablesCSS.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/styles/dataTablesCSS.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/template/clearTemplate.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/template/clearTemplate.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/template/eventStatesMainWindow.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/template/eventStatesMainWindow.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/template/footer.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/template/footer.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/template/header.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/template/header.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/template/leftMenuContent.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/template/leftMenuContent.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/template/navbar.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/template/navbar.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/template/template.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/template/template.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/websocket.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/websocket.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/websocket2.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/websocket2.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tile-defs/definitions.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tile-defs/definitions.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/base_connector.php" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/base_connector.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/chart_connector.php" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/chart_connector.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/combo_connector.php" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/combo_connector.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/convert.php" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/convert.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/crosslink_connector.php" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/crosslink_connector.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/data_connector.php" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/data_connector.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/dataprocessor.php" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/dataprocessor.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/dataview_connector.php" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/dataview_connector.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/db_adodb.php" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/db_adodb.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/db_common.php" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/db_common.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/db_excel.php" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/db_excel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/db_filesystem.php" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/db_filesystem.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/db_mssql.php" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/db_mssql.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/db_mysqli.php" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/db_mysqli.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/db_oracle.php" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/db_oracle.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/db_pdo.php" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/db_pdo.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/db_phpcake.php" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/db_phpcake.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/db_phpci.php" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/db_phpci.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/db_phpyii.php" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/db_phpyii.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/db_postgre.php" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/db_postgre.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/db_sasql.php" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/db_sasql.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/db_sqlite.php" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/db_sqlite.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/db_sqlite3.php" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/db_sqlite3.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/db_sqlsrv.php" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/db_sqlsrv.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/filesystem_item.php" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/filesystem_item.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/form_connector.php" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/form_connector.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/gantt_connector.php" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/gantt_connector.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/grid_config.php" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/grid_config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/grid_connector.php" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/grid_connector.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/keygrid_connector.php" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/keygrid_connector.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/mixed_connector.php" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/mixed_connector.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/options_connector.php" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/options_connector.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/scheduler_connector.php" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/scheduler_connector.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/strategy.php" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/strategy.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/tools.php" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/tools.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/tree_connector.php" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/tree_connector.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/treedatagroup_connector.php" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/treedatagroup_connector.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/treedatamultitable_connector.php" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/treedatamultitable_connector.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/treegrid_connector.php" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/treegrid_connector.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/treegridgroup_connector.php" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/treegridgroup_connector.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/treegridmultitable_connector.php" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/treegridmultitable_connector.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/treegroup_connector.php" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/treegroup_connector.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/treemultitable_connector.php" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/treemultitable_connector.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/update.php" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/update.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/xss_filter.php" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/connector/xss_filter.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/dhtmlxscheduler.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/dhtmlxscheduler.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/dhtmlxscheduler.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/dhtmlxscheduler.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/dhtmlxscheduler_classic.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/dhtmlxscheduler_classic.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/dhtmlxscheduler_flat.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/dhtmlxscheduler_flat.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/dhtmlxscheduler_glossy.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/dhtmlxscheduler_glossy.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_active_links.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_active_links.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_agenda_view.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_agenda_view.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_all_timed.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_all_timed.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_collision.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_collision.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_container_autoresize.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_container_autoresize.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_cookie.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_cookie.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_editors.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_editors.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_expand.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_expand.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_html_templates.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_html_templates.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_key_nav.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_key_nav.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_layer.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_layer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_limit.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_limit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_map_view.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_map_view.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_minical.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_minical.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_monthheight.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_monthheight.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_multiselect.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_multiselect.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_multisource.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_multisource.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_mvc.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_mvc.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_offline.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_offline.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_outerdrag.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_outerdrag.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_pdf.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_pdf.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_quick_info.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_quick_info.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_readonly.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_readonly.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_recurring.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_recurring.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_serialize.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_serialize.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_tooltip.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_tooltip.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_url.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_url.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_wp.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_wp.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_year_view.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/ext/dhtmlxscheduler_year_view.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_ar.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_ar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_be.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_be.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_ca.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_ca.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_cn.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_cn.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_cs.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_cs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_da.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_da.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_de.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_de.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_el.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_el.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_en.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_en.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_es.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_es.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_fi.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_fi.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_fr.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_fr.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_he.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_he.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_hu.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_hu.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_it.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_it.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_jp.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_jp.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_nb.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_nb.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_nl.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_nl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_no.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_no.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_pl.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_pl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_pt.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_pt.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_ro.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_ro.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_ru.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_ru.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_si.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_si.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_sk.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_sk.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_sv.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_sv.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_tr.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_tr.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_ua.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/locale_ua.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/locale_recurring_be.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/locale_recurring_be.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/locale_recurring_cn.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/locale_recurring_cn.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/locale_recurring_cs.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/locale_recurring_cs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/locale_recurring_da.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/locale_recurring_da.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/locale_recurring_de.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/locale_recurring_de.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/locale_recurring_el.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/locale_recurring_el.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/locale_recurring_en.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/locale_recurring_en.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/locale_recurring_es.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/locale_recurring_es.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/locale_recurring_fi.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/locale_recurring_fi.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/locale_recurring_fr.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/locale_recurring_fr.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/locale_recurring_it.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/locale_recurring_it.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/locale_recurring_nb.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/locale_recurring_nb.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/locale_recurring_nl.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/locale_recurring_nl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/locale_recurring_pl.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/locale_recurring_pl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/locale_recurring_pt.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/locale_recurring_pt.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/locale_recurring_ro.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/locale_recurring_ro.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/locale_recurring_ru.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/locale_recurring_ru.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/locale_recurring_sk.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/locale_recurring_sk.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/locale_recurring_sv.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/locale_recurring_sv.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/locale_recurring_ua.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/locale_recurring_ua.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/repeat_template_be.html" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/repeat_template_be.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/repeat_template_cn.html" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/repeat_template_cn.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/repeat_template_de.html" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/repeat_template_de.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/repeat_template_el.html" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/repeat_template_el.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/repeat_template_en.html" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/repeat_template_en.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/repeat_template_es.html" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/repeat_template_es.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/repeat_template_fr.html" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/repeat_template_fr.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/repeat_template_it.html" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/repeat_template_it.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/repeat_template_nl.html" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/repeat_template_nl.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/repeat_template_ro.html" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/repeat_template_ro.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/repeat_template_ru.html" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/repeat_template_ru.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/repeat_template_sk.html" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/locale/recurring/repeat_template_sk.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/dhtmlxscheduler.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/dhtmlxscheduler.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_active_links.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_active_links.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_agenda_view.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_agenda_view.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_all_timed.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_all_timed.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_collision.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_collision.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_container_autoresize.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_container_autoresize.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_cookie.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_cookie.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_editors.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_editors.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_expand.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_expand.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_html_templates.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_html_templates.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_key_nav.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_key_nav.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_layer.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_layer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_limit.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_limit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_map_view.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_map_view.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_minical.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_minical.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_monthheight.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_monthheight.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_multiselect.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_multiselect.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_multisource.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_multisource.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_mvc.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_mvc.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_offline.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_offline.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_outerdrag.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_outerdrag.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_pdf.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_pdf.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_quick_info.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_quick_info.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_readonly.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_readonly.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_recurring.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_recurring.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_serialize.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_serialize.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_tooltip.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_tooltip.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_url.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_url.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_wp.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_wp.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_year_view.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/ext/dhtmlxscheduler_year_view.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/skins/dhtmlxscheduler.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/skins/dhtmlxscheduler.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/skins/dhtmlxscheduler_classic.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/skins/dhtmlxscheduler_classic.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/skins/dhtmlxscheduler_flat.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/skins/dhtmlxscheduler_flat.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/skins/dhtmlxscheduler_glossy.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/codebase/sources/skins/dhtmlxscheduler_glossy.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/messages/messages_en.properties" afterPath="$PROJECT_DIR$/src/main/webapp/resources/messages/messages_en.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/messages/messages_pl.properties" afterPath="$PROJECT_DIR$/src/main/webapp/resources/messages/messages_pl.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/css/bootstrap-table.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/css/bootstrap-table.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/css/bootstrap.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/css/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/css/bootstrap.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/css/plugins/morris.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/css/plugins/morris.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/css/sb-admin.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/css/sb-admin.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/css/font-awesome.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/css/font-awesome.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/css/font-awesome.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/fonts/fontawesome-webfont.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/less/bordered-pulled.less" afterPath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/less/bordered-pulled.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/less/core.less" afterPath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/less/core.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/less/fixed-width.less" afterPath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/less/fixed-width.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/less/font-awesome.less" afterPath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/less/font-awesome.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/less/icons.less" afterPath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/less/icons.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/less/larger.less" afterPath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/less/larger.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/less/list.less" afterPath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/less/list.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/less/mixins.less" afterPath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/less/mixins.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/less/path.less" afterPath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/less/path.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/less/rotated-flipped.less" afterPath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/less/rotated-flipped.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/less/spinning.less" afterPath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/less/spinning.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/less/stacked.less" afterPath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/less/stacked.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/less/variables.less" afterPath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/less/variables.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/scss/_bordered-pulled.scss" afterPath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/scss/_bordered-pulled.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/scss/_core.scss" afterPath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/scss/_core.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/scss/_fixed-width.scss" afterPath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/scss/_fixed-width.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/scss/_icons.scss" afterPath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/scss/_icons.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/scss/_larger.scss" afterPath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/scss/_larger.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/scss/_list.scss" afterPath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/scss/_list.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/scss/_mixins.scss" afterPath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/scss/_mixins.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/scss/_path.scss" afterPath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/scss/_path.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/scss/_rotated-flipped.scss" afterPath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/scss/_rotated-flipped.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/scss/_spinning.scss" afterPath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/scss/_spinning.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/scss/_stacked.scss" afterPath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/scss/_stacked.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/scss/_variables.scss" afterPath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/scss/_variables.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/scss/font-awesome.scss" afterPath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/font-awesome-4.1.0/scss/font-awesome.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/fonts/glyphicons-halflings-regular.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/js/bootstrap-table.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/js/bootstrap-table.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/js/bootstrap-table.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/js/bootstrap-table.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/js/bootstrap.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/js/bootstrap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/js/jquery.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/js/jquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/js/jquery.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/bootstrap/js/jquery.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/css/calendar.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/css/calendar.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/css/style.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/js/calendar.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/js/calendar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/js/ion.sound.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/js/ion.sound.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/js/ion.sound.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/js/ion.sound.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/js/register.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/mytheme/js/register.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/websocket/sockjs-0.3.4.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/websocket/sockjs-0.3.4.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/websocket/stomp.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/websocket/stomp.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jbossews.iml" afterPath="$PROJECT_DIR$/jbossews.iml" />
     </list>
     <ignored path="jbossews.iws" />
     <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -446,12 +24,43 @@
   <component name="FavoritesManager">
     <favorites_list name="jbossews" />
   </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="jbossews.iml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jbossews.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
       <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/.gitignore" />
+      </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -474,11 +83,12 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="x" value="-1" />
     <option name="y" value="-1" />
-    <option name="width" value="1602" />
-    <option name="height" value="877" />
+    <option name="width" value="1922" />
+    <option name="height" value="1202" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -505,14 +115,25 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="jbossews">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane />
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope">
-        <subPane subId="Project Files" />
-      </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -607,6 +228,11 @@
       <method />
     </configuration>
   </component>
+  <component name="SbtLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
@@ -618,6 +244,7 @@
       <option name="presentableId" value="Default" />
       <updated>1470590553918</updated>
       <workItem from="1470590558133" duration="468000" />
+      <workItem from="1474903676041" duration="558000" />
     </task>
     <task id="LOCAL-00001" summary="WTF-1.0">
       <created>1470590969102</created>
@@ -630,35 +257,39 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="468000" />
+    <option name="totallyTimeSpent" value="1026000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-1" width="1602" height="877" extended-state="6" />
-    <editor active="false" />
+    <frame x="-1" y="-1" width="1922" height="1202" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5808625" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5803657" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -681,5 +312,23 @@
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/jbossews.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

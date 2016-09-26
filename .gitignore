@@ -1,9 +1,12 @@
 /target/
 target
 .settings/*
-!.settings/.jsdtscope .idea/
+.settings/
+.jsdtscope
+.idea/*
 .project
 .classpath
-.idea/*
 .openshift/*
 .springBeans
+.tern-project
+
